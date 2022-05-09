@@ -1,0 +1,5 @@
+·> Nomenclatura cammelCase.
+·> nombres de clases y ficheros que contienen las clases en minúsculas
+·> autoload transforma la string en minúscluas para enconctrar los archivos en minúsculas
+·> Todas las variables en inglés
+·> 
