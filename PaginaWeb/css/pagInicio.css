@@ -61,7 +61,6 @@
     .four {
       grid-column: 1;
       grid-row: 4;
-      background-color: red;
     }
     .five {
       grid-column: 2;
@@ -72,7 +71,7 @@
       grid-row: 4;
     }
 }
-@media (min-width:641px) {
+@media (min-width:640px) {
   .wrapper {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
