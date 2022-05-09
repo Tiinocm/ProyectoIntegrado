@@ -71,7 +71,7 @@
       grid-row: 4;
     }
 }
-@media (min-width:640px) {
+@media (min-width:641px) {
   .wrapper {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
