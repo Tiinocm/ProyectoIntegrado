@@ -61,6 +61,7 @@
     .four {
       grid-column: 1;
       grid-row: 4;
+      background-color: red;
     }
     .five {
       grid-column: 2;
