@@ -1,20 +1,34 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="">
     <title>Iniciar sesión</title>
+    <link rel="stylesheet" href="css/bulma.css">
+    <link rel="stylesheet" href="css/inicioSesion.css">
 </head>
+
 <body>
-    <form action="" method="post">
-        <p>Inicia sesión</p>
-        <p></p>
-    <p><input type="email" name="email" required placeholder="Email*" /></p>
-    <p><input type="password" name="password" required placeholder="Password*" /></p>
-    <button required  type="submit" name="signIn" id="signIn">Sign In</button>
-    <!-- se tiene que enlazar a registrarse si no hay usuario en la base de datos -->
-        
-    </form>
+
+    <section id="formulario" class="columns">
+        <div class="column"></div>
+        <div class="column card contenido">
+            <p>
+            <form method="post" action="">
+                <label for="Email" class="label">Email: </label>
+                <input type="email" name="email" id="Email" class="input">
+                <label for="password" class="label">Contraseña: </label>
+                <input type="password" name="password" id="password" class="input">
+                <button class="button">Inicio</button>
+            </form>
+            </p>
+        </div>
+        <div class="column"></div>
+    </section>
+
 </body>
+
 </html>
