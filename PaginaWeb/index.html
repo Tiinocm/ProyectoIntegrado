@@ -5,29 +5,64 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="img/CRONOS-icono.png" type="image/x-icon">
     <title>Cronos</title>
     <link rel="stylesheet" href="css/pagInicio.css">
     <style>
-        .portadaNoticia::before{
+        .portada0::before{
             background-image: url(img/zeri.png);
+            content: '';
+            position: relative;
+            display: block;
+            width: 100%; height: 100%;
+            background-size: 100%;
+            filter: brightness(65%);
+            z-index: 0;
         }
+        .portada1::before{
+            background-image: url(img/sfv.jpg);
+            content: '';
+            position: relative;
+            display: block;
+            width: 100%; height: 100%;
+            background-size: 100%;
+            filter: brightness(65%);
+            z-index: 0;
+        }
+        .portada2::before{
+            background-image: url(img/Viego.jpg);
+            content: '';
+            position: relative;
+            display: block;
+            width: 100%; height: 100%;
+            background-size: 100%;
+            filter: brightness(65%);
+            z-index: 0;
+        }
+        
     </style>
 </head>
 
 <body>
     <div class="wrapper">
-        <div class="one">One</div>
-        <div class="two">Two</div>
+        <header class="one">One</header>
+        <aside class="two">Two</aside>
         <div class="three">
             <div class="tOne portadaNoticia portada0">
                 <div class="titulo">zeri ta bien juegala</div>
                 <div class="comunidad">League Of Legends</div>
             </div>
-            <div class="tTwo">tTwo</div>
+            <div class="tTwo portadaNoticia portada1">
+                <div class="titulo">illo se pegan</div>
+                <div class="comunidad">Street Fighter</div>
+            </div>
+             <div class="tThree portadaNoticia portada2">
+                <div class="titulo">Viego rework noticias</div>
+                <div class="comunidad">League Of Legends</div>
+            </div>
         </div>
         <div class="four">Four</div>
-        <div class="five">Five</div>
-        <div class="six">Six</div>
+
     </div>
 </body>
 
