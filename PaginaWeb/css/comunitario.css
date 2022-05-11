@@ -1,0 +1,129 @@
+@media (max-width: 639px) {
+    .textNoticia{
+        display: none;
+    }
+    .gridMV {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-gap: 5px;
+        grid-auto-rows: minmax(100px, auto);
+    }
+
+    .gridMV * {
+        /* temporal */
+        background-color: rgba(0, 0, 0, 0.1);
+        text-align: center;
+    }
+
+    .headerMV {
+        grid-column: 1 / 5;
+        grid-row: 1;
+    }
+
+    .hamMV {
+        grid-column: 1;
+        grid-row: 1;
+    }
+    .noticias{
+        grid-column: 1 / 5;
+        grid-row: 2;
+    }
+}
+
+@media (min-width:640px) {
+    .titulo {
+        display: none;
+    }
+
+    .gridMV {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-gap: 5px;
+        grid-auto-rows: minmax(100px, auto);
+    }
+
+    .gridMV * {
+        /* temporal */
+        background-color: rgba(0, 0, 0, 0.1);
+        text-align: center;
+    }
+
+    .headerMV {
+        grid-column: 1 / 5;
+        grid-row: 1;
+    }
+
+    .hamMV {
+        grid-column: 1;
+        grid-row: 1;
+    }
+    .noticias{
+        grid-column: 1 / 5;
+        grid-row: 2;
+
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-gap: 5px;
+        grid-auto-rows: minmax(100px, auto);
+    }
+    .noticias .noticia{
+        height: 200px;
+    }
+    .noticias .noticia{
+        grid-column: 1;
+        grid-row: unset;
+      }
+      .noticias .textNoticia{
+        grid-column: 2 / 4;
+      }
+      .titulo{
+        position: relative;
+        color: white;
+    
+        font-size: 22px;
+        padding-right: 10px;
+        padding-left: 20px;
+        bottom: 30%;
+        z-index: 1;
+        font-weight: bold;
+      }
+    
+      .comunidad{
+        background-color: rgb(255, 122, 123, 0.8);
+        position: relative;
+        bottom: 90%;
+        padding: 5px;
+        color: white;
+        width: fit-content;
+      }
+      .comunidad::before{
+        content: '#';
+      }
+}
+
+/* eliminar bordes blancos al rededor del contenido */
+html, body {
+    margin: 0;
+    padding: 0;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    /* eliminar el margin y el padding propios del ul por defecto */
+}
+
+.comunidad{
+    background-color: rgb(255, 122, 123, 0.8);
+    position: relative;
+    float: right;
+    bottom: 90%;
+    padding: 5px;
+    color: white;
+    width: fit-content;
+  }
+
+  .comunidad::before{
+    content: '#';
+  }
