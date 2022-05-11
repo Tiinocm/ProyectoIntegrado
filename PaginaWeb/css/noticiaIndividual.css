@@ -1,0 +1,143 @@
+@media (max-width: 640px) {
+
+    /* grid primcipal movil */
+    .grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        /*    grid-gap: 5px; */
+        grid-auto-rows: minmax(100px, auto);
+        text-align: center;
+    }
+
+    .header {
+        grid-column: 1 / 4;
+        grid-row: 1;
+        line-height: 150px;
+    }
+
+    .header div {
+        position: relative;
+        color: white;
+        font-weight: bold;
+    }
+
+    .header::before {
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 150px;
+        display: block;
+        background-size: 100%;
+        filter: brightness(65%);
+        z-index: 0;
+    }
+
+    .header div {
+        z-index: 10;
+    }
+
+    .ham {
+        grid-column: 1;
+        grid-row: 1;
+    }
+
+    .noticia {
+        grid-column: 1 / 4;
+        grid-row: 2;
+
+    }
+
+    /* autor */
+    .autor, .dia {
+        float: right;
+        margin: 5px;
+    }
+
+    .parrafo {
+        margin: 10px;
+        text-align: left;
+    }
+
+    .primero {
+        margin-top: 30px;
+    }
+
+    .imagen {
+        width: 60%;
+    }
+}
+
+@media (min-width:640px) {
+
+    .grid {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-gap: 5px;
+        grid-auto-rows: minmax(100px, auto);
+        text-align: center;
+    }
+
+    .header {
+        grid-column: 1 / 5;
+        grid-row: 1;
+        height: 200px;
+        /* centrar el título */
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .header div {
+        position: relative;
+        color: white;
+        font-weight: bold;
+        font-size: 32px;
+    }
+
+    .header::before {
+        content: '';
+        position: absolute;
+        width: 100%;
+        height: 200px;
+        display: block;
+        background-size: 100%;
+        filter: brightness(65%);
+    }
+
+    .ham {
+        grid-column: 1;
+        grid-row: 1;
+    }
+
+    .noticia {
+        grid-column: 2 / 4;
+        grid-row: 2;
+        max-width: 780px;
+    }
+
+    /* autor */
+    .autor, .dia {
+        float: right;
+        margin: 5px;
+    }
+
+    .parrafo {
+        margin: 10px;
+        text-align: left;
+        font-size: 20px;
+    }
+
+    .primero {
+        margin-top: 30px;
+    }
+
+    .imagen {
+        width: 100%;
+    }
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+}
