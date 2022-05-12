@@ -355,3 +355,9 @@ input[type="checkbox"] {
   transition-delay: .6s;
   transform: translateX(-100px);
 }
+
+/* fin hamburguer */
+
+a, a:visited{
+  text-decoration: none;
+}
