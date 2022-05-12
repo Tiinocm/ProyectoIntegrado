@@ -18,29 +18,29 @@
     grid-column: 1 / 4;
     grid-row: 1;
   }
-  .hamMV{
+  .ham{
     grid-column: 1;
     grid-row: 1;
   }
-  .destacadasMV{
+  .destacadas{
     grid-column: 1 / 4;
     grid-row: 2;
     height: 318px;
   }
-  .scrollMV{
+  .scroll{
     grid-column: 1 / 4;
     grid-row: 3;
   }
   /* fin grid principal */
 
   /* decoración de listas desordenadas contenedoras de noticias */
-  .mejorValoradasMV, .noticiasScroll{
+  .mejorValoradas, .noticiasScroll{
     list-style-type: none;
     margin: 0; padding: 0; /* eliminar el margin y el padding propios del ul por defecto */
   }
 
   /* decoración noticia móvil */
-  .noticiaMV{
+  .noticia{
     width: 100%;
     height: 100px;
   }
@@ -69,10 +69,10 @@
     content: '#';
   }
   /* por ahora todos los elementos son "even" debido a los ::before, pero la idea es añadir los odd y even como clases directamente desde js */
-  .mejorValoradasMV:nth-child(even) .titulo{
+  .mejorValoradas:nth-child(even) .titulo{
     float: left;
   }
-  .mejorValoradasMV:nth-child(even) .comunidad{
+  .mejorValoradas:nth-child(even) .comunidad{
     float: right;
   }
 
@@ -105,26 +105,26 @@
       grid-column: 1 / 5;
       grid-row: 1;
     }
-    .hamMV{
+    .ham{
       grid-column: 1;
       grid-row: 1;
     }
-    .mejorValoradasMV, .noticiasScroll{
+    .mejorValoradas, .noticiasScroll{
       list-style-type: none;
       margin: 0; padding: 0; /* eliminar el margin y el padding propios del ul por defecto */
     }
 
-    .destacadasMV{
+    .destacadas{
       grid-column: 1 / 5;
       grid-row: 2;
       height: 220px;
     }
-    .scrollMV{
+    .scroll{
       grid-column: 1 / 5;
       grid-row: 3;
     }
 
-    .mejorValoradasMV{
+    .mejorValoradas{
       display: grid;
       grid-template-columns: repeat(4, 1fr);
       grid-gap: 5px;
@@ -144,7 +144,7 @@
       grid-row: 2;
     }
 
-    .destacadasMV .titulo{
+    .destacadas .titulo{
       position: relative;
       color: white;
       float: left;
@@ -169,10 +169,10 @@
     .comunidad::before{
       content: '#';
     }
-    .scrollMV .noticiaMV{
+    .scroll .noticia{
       height: 200px;
     }
-    .scrollMV .titulo{
+    .scroll .titulo{
       display: none;
     }
 
@@ -183,7 +183,7 @@
       grid-auto-rows: minmax(100px, auto);
     }
 
-    .noticiasScroll .noticiaMV{
+    .noticiasScroll .noticia{
       grid-column: 1;
       grid-row: unset;
     }
