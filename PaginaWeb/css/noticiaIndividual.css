@@ -12,7 +12,6 @@
     .header {
         grid-column: 1 / 4;
         grid-row: 1;
-        line-height: 150px;
     }
 
     .header div {
@@ -21,15 +20,21 @@
         font-weight: bold;
     }
 
-    .header::before {
-        content: "";
-        position: absolute;
+    .titulo{
+        background-color: white;
+        width: 80%;
+        position: relative;
+        top: -50px;
+        padding: 10px;
+        border-radius: 5px;
+        box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    }
+    .imgHeader{
         width: 100%;
-        height: 150px;
-        display: block;
-        background-size: 100%;
-        filter: brightness(65%);
-        z-index: 0;
+    }
+
+    .header::before {
+        display: none;
     }
 
     .header div {
@@ -44,7 +49,10 @@
     .noticia {
         grid-column: 1 / 4;
         grid-row: 2;
-
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        justify-content: center;
     }
 
     /* autor */
@@ -77,32 +85,38 @@
         text-align: center;
     }
 
+    .grid > .noticia{
+        margin: auto;
+    }
+
     .header {
         grid-column: 1 / 5;
         grid-row: 1;
-        height: 200px;
         /* centrar el título */
-        display: flex;
-        align-items: center;
-        flex-direction: column;
-        justify-content: center;
-    }
-
-    .header div {
-        position: relative;
-        color: white;
-        font-weight: bold;
-        font-size: 32px;
     }
 
     .header::before {
         content: '';
-        position: absolute;
+        position: relative;
         width: 100%;
-        height: 200px;
+        height: 100%;
         display: block;
         background-size: 100%;
-        filter: brightness(65%);
+        filter:blur(5px);
+    }
+    .imgHeader{
+        width: 60%;
+        position: relative;
+        bottom: 100%;
+    }
+    .titulo{
+        background-color: white;
+        width: 100%;
+        position: relative;
+        top: -50px;
+        padding: 20px;
+        border-radius: 5px;
+        box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
     }
 
     .ham {
@@ -111,9 +125,13 @@
     }
 
     .noticia {
-        grid-column: 2 / 4;
+        grid-column: 1 / 5;
         grid-row: 2;
-        max-width: 780px;
+        max-width: 60%;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        justify-content: center;
     }
 
     /* autor */
@@ -133,7 +151,7 @@
     }
 
     .imagen {
-        width: 100%;
+        width: 60%;
     }
 }
 
