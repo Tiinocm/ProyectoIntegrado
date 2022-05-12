@@ -3,18 +3,18 @@
     display: none;
   }
 /* grid principal para móviles */
-  .gridMV{ /* padre del grid */
+  .grid{ /* padre del grid */
     display: grid;
     grid-template-columns: repeat(3, 1fr);
 /*     grid-gap: 5px; */
     grid-auto-rows: minmax(100px, auto);
   }
-  .gridMV * { /* temporal */
+  .grid * { /* temporal */
     background-color: rgba(0, 0, 0, 0.1);
     text-align: center;
   }
   
-  .headerMV{
+  .header{
     grid-column: 1 / 4;
     grid-row: 1;
   }
@@ -86,22 +86,22 @@
 }
 @media (min-width:640px) {
 
-    .gridMV{
+    .grid{
       display: none;
     }
     /* grid para PC */
-    .gridMV{
+    .grid{
       display: grid;
       grid-template-columns: repeat(4, 1fr);
       grid-gap: 5px;
       grid-auto-rows: minmax(100px, auto);
     }
-    .gridMV * { /* temporal */
+    .grid * { /* temporal */
       background-color: rgba(0, 0, 0, 0.1);
       text-align: center;
     }
 
-    .headerMV{
+    .header{
       grid-column: 1 / 5;
       grid-row: 1;
     }
