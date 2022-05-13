@@ -6,6 +6,7 @@ class cronos extends connection {
     public function getNoticias($publicado)
     {
         /* 
+            getNoticias carga desde la base de datos las noticias publicadas o no publicadas en función de la siguiente lógica:
             $publicado = 1 noticias publicadas
             $publicado = 0 noticias NO publicadas
         */
@@ -26,6 +27,7 @@ class cronos extends connection {
 
     public function drawNoticias($lugar)
     {
+        /* muestra por pantalla las noticias de index.html (cabe destacar que al haber dos formato de noticias diferentes $lugar identifica el formato que se le da dependiendo de donde deberían de ir) */
         $countFor = count($this->publicadas);
         for ($i=0; $i < $countFor; $i++) { 
             if ($lugar != "destacadas") {
@@ -46,6 +48,7 @@ class cronos extends connection {
 
     public function drawComunitario()
     {
+        /* muestra por pantalla las noticias de comunitario.php */
         for ($i=0; $i < count($this->publicadas); $i++) { 
             $str = "<li class='noticia noti$i'>";
             $str .= "<a href='noticiaIndividual.html?id=". $this->publicadas[$i]->getId() . "'><div class='titulo'>" . $this->publicadas[$i]->getTitulo() . "</div></a>";
@@ -58,6 +61,7 @@ class cronos extends connection {
 
     public function styleNoticias()
     {
+        /* carga un css a la etiqueta <style> en el head de los html que necesitan un estilo para las noticias */
         for ($i=0; $i < count($this->publicadas); $i++) { 
             $style = ".noti$i::before {
                 content: '';
