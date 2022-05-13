@@ -1,0 +1,7 @@
+### Rewrite Rules Added by CyberPanel Rewrite Rule Generator
+
+rewriteCond %{HTTPS} !on
+rewriteCond %{HTTP:X-Forwarded-Proto} !https
+rewriteRule ^(.*)$ https://%{SERVER_NAME}%{REQUEST_URI} [R,L]
+
+### End CyberPanel Generated Rules.
