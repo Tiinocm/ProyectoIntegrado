@@ -2,4 +2,4 @@
 require_once "autoloading.php";
 
 $cronos = new cronos;
-$cronos->getNoticias();
+$cronos->getNoticias(1);
