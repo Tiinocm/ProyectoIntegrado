@@ -26,14 +26,12 @@ class cronos extends connection {
 
     public function drawNoticias($lugar)
     {
-        /* 
-                <li class="textNoticia">
-                    <div class="tituloT">prueba</div>
-                </li>
-        */
-        for ($i=0; $i < count($this->publicadas); $i++) { 
+        $countFor = count($this->publicadas);
+        for ($i=0; $i < $countFor; $i++) { 
             if ($lugar != "destacadas") {
                 $i = 3;
+            }else{
+                $countFor = 3;
             }
             $str = "<li class='noticia noti$i'>";
             $str .= "<a href='noticiaIndividual.html?id=". $this->publicadas[$i]->getId() . "'><div class='titulo'>" . $this->publicadas[$i]->getTitulo() . "</div></a>";
@@ -42,6 +40,18 @@ class cronos extends connection {
             if ($lugar != "destacadas") {
                 $str .= '<li class="textNoticia"><div class="tituloT">' . $this->publicadas[$i]->getTitulo() . '</div></li>';
             }
+            echo $str;  
+        }
+    }
+
+    public function drawComunitario()
+    {
+        for ($i=0; $i < count($this->publicadas); $i++) { 
+            $str = "<li class='noticia noti$i'>";
+            $str .= "<a href='noticiaIndividual.html?id=". $this->publicadas[$i]->getId() . "'><div class='titulo'>" . $this->publicadas[$i]->getTitulo() . "</div></a>";
+            $str .= "<div class='comunidad'>" . $this->publicadas[$i]->getNombreComunidad() . "</div>
+            </li>";
+                $str .= '<li class="textNoticia"><div class="tituloT">' . $this->publicadas[$i]->getTitulo() . '</div></li>';
             echo $str;  
         }
     }
