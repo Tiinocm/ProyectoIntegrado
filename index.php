@@ -51,8 +51,8 @@ $cronos->getNoticias(1);
         <section class="scroll">
             <header>noticias scroll</header>
             <ul class="noticiasScroll">
-            <?php $cronos->drawNoticias("") ?>
 
+                <?php $cronos->drawNoticias("") ?>
             </ul>
         </section>
     </div>

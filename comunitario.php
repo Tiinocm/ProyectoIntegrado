@@ -35,6 +35,7 @@ $cronos->getNoticias(1);
                 </ul>
             </div>
         </aside>
+    </div>
         <ul class="noticias">
             <?php $cronos->drawComunitario() ?>
         </ul>
