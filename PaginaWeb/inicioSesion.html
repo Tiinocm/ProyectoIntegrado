@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="">
+    <title>Iniciar sesión</title>
+    <link rel="stylesheet" href="css/bulma.css">
+    <link rel="stylesheet" href="css/inicioSesion.css">
+</head>
+
+<body>
+
+    <div class="grid">
+        <header class="header">Cronos</header>
+        <aside class="ham">
+            <input type="checkbox" id="active">
+            <label for="active" class="menu-btn"><span></span></label>
+            <label for="active" class="close"></label>
+            <div class="wrapper">
+                <ul>
+                    <li><a href="#">Iniciar Sesión</a></li>
+                    <li><a href="create.html">Crear mi propia noticia</a></li>
+                    <li><a href="index.html">Noticias destacadas</a></li>
+                    <li><a href="comunitario.html">Noticias comunitarias</a></li>
+                </ul>
+            </div>
+        </aside>
+    </div>
+    <section class="section columns">
+        <div class="column"></div>
+        <div class="column box contenido has-text-centered">
+            <p class="formulario">
+            <form method="post" action="">
+                <label for="Email" class="label">Email: </label>
+                <input type="email" name="email" id="Email" class="input">
+                <label for="password" class="label">Contraseña: </label>
+                <input type="password" name="password" id="password" class="input">
+                <button class="button mt-1">Inicio</button>
+                <p>¿Todavía no tienes una cuenta? Registrate <a href="register.html">aquí</a></p>
+            </form>
+            </p>
+        </div>
+        <div class="column"></div>
+    </section>
+
+</body>
+
+</html>
