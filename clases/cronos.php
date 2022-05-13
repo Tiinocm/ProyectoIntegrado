@@ -40,7 +40,7 @@ class cronos extends connection {
             $str .= "<div class='comunidad'>" . $this->publicadas[$i]->getNombreComunidad() . "</div>
             </li>";
             if ($lugar != "destacadas") {
-                $str .= '<li class="textNoticia"><div class="tituloT">' . $this->publicadas[$i]->getTitulo() . '</div></li>';
+                $str .= '<li class="textNoticia"><a href="noticiaIndividual.html?id=' . $this->publicadas[$i]->getId() . '"<div class="tituloT">' . $this->publicadas[$i]->getTitulo() . '</div></a></li>';
             }
             echo $str;  
         }
@@ -54,7 +54,7 @@ class cronos extends connection {
             $str .= "<a href='noticiaIndividual.html?id=". $this->publicadas[$i]->getId() . "'><div class='titulo'>" . $this->publicadas[$i]->getTitulo() . "</div></a>";
             $str .= "<div class='comunidad'>" . $this->publicadas[$i]->getNombreComunidad() . "</div>
             </li>";
-                $str .= '<li class="textNoticia"><div class="tituloT">' . $this->publicadas[$i]->getTitulo() . '</div></li>';
+                $str .= '<li class="textNoticia"><a href="noticiaIndividual.html?id=' . $this->publicadas[$i]->getId() . '"<div class="tituloT">' . $this->publicadas[$i]->getTitulo() . '</div></a></li>';
             echo $str;  
         }
     }
