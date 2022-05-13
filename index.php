@@ -34,7 +34,7 @@ $cronos->getNoticias(1);
                     <li><a href="inicioSesion.html">Iniciar Sesión</a></li>
                     <li><a href="create.html">Crear mi propia noticia</a></li>
                     <li><a href="#">Noticias destacadas</a></li>
-                    <li><a href="comunitario.html">Noticias comunitarias</a></li>
+                    <li><a href="comunitario.php">Noticias comunitarias</a></li>
                 </ul>
             </div>
         </aside>
