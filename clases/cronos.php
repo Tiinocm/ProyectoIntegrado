@@ -36,7 +36,8 @@ class cronos extends connection {
         }
         $str = "";
         for ($i=0; $i < $countFor; $i++) { 
-            $str .= "<li class='noticia noti$i'>";
+            $num = ($i % 2 == 0) ? "par" : "impar";
+            $str .= "<li class='noticia noti$i $num'>";
             $str .= "<a href='noticiaIndividual.html?id=". $this->publicadas[$i]->getId() . "'><div class='titulo'>" . $this->publicadas[$i]->getTitulo() . "</div></a>";
             $str .= "<div class='comunidad'>" . $this->publicadas[$i]->getNombreComunidad() . "</div>
             </li>";
@@ -51,7 +52,8 @@ class cronos extends connection {
     {
         /* muestra por pantalla las noticias de comunitario.php */
         for ($i=0; $i < count($this->publicadas); $i++) { 
-            $str = "<li class='noticia noti$i'>";
+            $num = ($i % 2 == 0) ? "par" : "impar";
+            $str = "<li class='noticia noti$i $num'>";
             $str .= "<a href='noticiaIndividual.html?id=". $this->publicadas[$i]->getId() . "'><div class='titulo'>" . $this->publicadas[$i]->getTitulo() . "</div></a>";
             $str .= "<div class='comunidad'>" . $this->publicadas[$i]->getNombreComunidad() . "</div>
             </li>";
