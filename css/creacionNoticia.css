@@ -28,6 +28,7 @@
     padding: 10px;
     border-radius: 5px;
     box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    margin: auto;
   }
 
   .imgHeader {
@@ -168,12 +169,12 @@
   }
 
   #titulo {
-    width: 15%;
+    width: 30%;
     transition: all 0.4s ease-in-out;
   }
 
   #titulo:focus {
-    width: 30%;
+    width: 60%;
     outline: none;
   }
 }
