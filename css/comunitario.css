@@ -71,6 +71,7 @@
         grid-template-columns: repeat(3, 1fr);
         grid-gap: 5px;
         grid-auto-rows: minmax(100px, auto);
+        text-align: center;
     }
     .noticias .noticia{
         height: 200px;
@@ -82,17 +83,9 @@
       .noticias .textNoticia{
         grid-column: 2 / 4;
         background-color: rgb(123, 161, 166, .75);
-      }
-      .titulo{
-        position: relative;
-        color: white;
-    
-        font-size: 22px;
-        padding-right: 10px;
-        padding-left: 20px;
-        bottom: 30%;
-        z-index: 1;
         font-weight: bold;
+        color: white;
+        font-size: 1.2em;
       }
     
       .comunidad{
@@ -106,6 +99,7 @@
       .comunidad::before{
         content: '#';
       }
+
 }
 
 /* eliminar bordes blancos al rededor del contenido */
@@ -285,3 +279,7 @@ ul {
     transform: translateX(-100px);
   }
 /* ham */  
+a, a:visited{
+  text-decoration: none;
+  color: inherit;
+}

@@ -356,4 +356,5 @@ input[type="checkbox"] {
 
 a, a:visited{
   text-decoration: none;
+  color: inherit;
 }
