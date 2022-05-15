@@ -57,5 +57,4 @@ $cronos->getNoticias(1);
         </section>
     </div>
 </body>
-
 </html>
