@@ -341,3 +341,6 @@ input[type="checkbox"] {
   content: "*";
   color: red;
 }
+.submit{
+  margin-top: 20px;
+}
