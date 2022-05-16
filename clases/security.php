@@ -78,7 +78,7 @@ class security extends connection
                 $this->conn->query($sql);
                 header("Location: " . $this->loginPage);
                 } catch (PDOException $e) {
-                    echo 'Falló la consulta: ' . $e->getMessage();
+                    echo "Este usuario ya existe";
                 }
 
             }else{

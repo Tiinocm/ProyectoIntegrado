@@ -28,7 +28,7 @@ $security->register();
             <label for="active" class="close"></label>
             <div class="wrapper">
                 <ul>
-                    <li><a href="inicioSesion.html">Iniciar Sesión</a></li>
+                    <li><a href="login.php">Iniciar Sesión</a></li>
                     <li><a href="create.html">Crear mi propia noticia</a></li>
                     <li><a href="index.php">Noticias destacadas</a></li>
                     <li><a href="comunitario.php">Noticias comunitarias</a></li>
