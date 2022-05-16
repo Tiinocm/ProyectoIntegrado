@@ -283,3 +283,12 @@ a, a:visited{
   text-decoration: none;
   color: inherit;
 }
+.header{
+  color:black;
+  text-transform: uppercase;
+}
+.logo{
+  width: 80px;
+  float: right;
+  margin-top: 20px;
+}
