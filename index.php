@@ -38,7 +38,7 @@ $loginMessage = $security->doLogin();
             <div class="wrapper">
                 <ul>
                     <li><a href="login.php"><?= ($security->getUserData()) ? $security->getUserData() : "Iniciar Sesión" ?></a></li>
-                    <li><a href="create.html">Crear mi propia noticia</a></li>
+                    <li><a href="create.php">Crear mi propia noticia</a></li>
                     <li><a href="#">Noticias destacadas</a></li>
                     <li><a href="comunitario.php">Noticias comunitarias</a></li>
                 </ul>
