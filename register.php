@@ -1,3 +1,10 @@
+<?php
+require_once "autoloading.php";
+$security = new security();
+$security->register();
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -34,14 +41,18 @@
         <div class="column box has-text-centered contenido">
             <p class="formulario">
             <form method="post" action="">
-                <label for="Email" class="label">Email: </label>
-                <input type="email" name="email" id="Email" class="input">
+                <label for="email" class="label">Email: </label>
+                <input type="email" name="email" id="email" class="input">
+
                 <label for="password" class="label">Contraseña: </label>
                 <input type="password" name="password" id="password" class="input">
+
                 <label for="password2" class="label">Repetir Contraseña: </label>
-                <input type="password2" name="password2" id="password2" class="input">
-                <label for="Name" class="name label">Nombre de Usuario: </label>
-                <input type="name" name="name" id="Name" class="input">
+                <input type="password" name="password2" id="password2" class="input">
+
+                <label for="name" class="name label">Nombre de Usuario: </label>
+                <input type="name" name="name" id="name" class="input">
+                
                 <button class="button mt-1">Inicio</button>
                 <p>¿Ya tienes una cuenta? Inicie sesión <a href="inicioSesion.html">aquí</a></p>
             </form>
