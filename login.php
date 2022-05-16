@@ -40,7 +40,7 @@ $loginMessage = $security->doLogin();
     <section class="section columns">
         <div class="column"></div>
         <div class="column box contenido has-text-centered">
-        <h1 style="color: red"><?= /* $loginMessage */ "a" ?></h1>
+        <h1 style="color: red"><?= $loginMessage ?></h1>
             <p class="formulario">
             <form method="post" action="">
                 <label for="userName" class="label">userName: </label>
