@@ -14,7 +14,7 @@
 <body>
 
     <div class="grid">
-        <header class="header">Cronos</header>
+        <header class="header"><img class="logo" src="img/CRONOS-icono.png">Cronos</header>
         <aside class="ham">
             <input type="checkbox" id="active">
             <label for="active" class="menu-btn"><span></span></label>
