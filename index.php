@@ -4,7 +4,7 @@ require_once "autoloading.php";
 $cronos = new cronos();
 $cronos->getNoticias(1);
 
-$security = new Security();
+$security = new security();
 $loginMessage = $security->doLogin();
 ?>
 
