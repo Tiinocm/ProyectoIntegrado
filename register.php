@@ -39,7 +39,7 @@
                 <label for="password" class="label">Contraseña: </label>
                 <input type="password" name="password" id="password" class="input">
                 <label for="password2" class="label">Repetir Contraseña: </label>
-                <input type="password2" name="password2" id="password2" class="input">
+                <input type="password" name="password2" id="password2" class="input">
                 <label for="Name" class="name label">Nombre de Usuario: </label>
                 <input type="name" name="name" id="Name" class="input">
                 <button class="button mt-1">Inicio</button>
