@@ -14,7 +14,7 @@
     <title>TítuloNoticia</title>
     <style>
         header::before {
-            background-image: url(img/zeri.png);
+            background-image: url(img/cronos_logo.png);
         }
     </style>
 </head>
@@ -22,7 +22,7 @@
 <body>
     <div class="grid">
         <header class="header">
-            <img class="imgHeader" src="img/zeri.png" alt="">
+            <img class="imgHeader" src="img/cronos_logo.png" alt="">
         </header>
         <aside class="ham">
             <input type="checkbox" id="active">
@@ -37,27 +37,51 @@
                 </ul>
             </div>
         </aside>
+
         <section class="noticia">
             <form action="" method="post">
                 <div class="titulo">
                     <label for="titulo" class="obligatorio">Título: </label>
-                    <input type="text" name="titulo" id="titulo" placeholder="Inserte el título de la noticia"
-                        required><br>
+                    <input type="text" name="titulo" id="titulo" placeholder="Inserte el título de la noticia" required><br>
                     <label for="img" class="obligatorio">imagen de portada: </label>
                     <input type="file" name="img" id="img" required>
                     <br>
                     <cite class="autor">Escrito por <a href="#" class="users">user</a></cite>
                     <div class="dia"> 9 Mayo 2022</div>
                 </div>
-
-                <div id="elementNoticia"></div>
-
-                <label for="element">añadir: </label>
-                <select name="element" id="element">
-                    <option value="0">Texto</option>
-                    <option value="1">multimedia</option>
+                <div class="selectorPlantilla">
+                <label for="plantilla">Plantilla a usar: </label>
+                <select name="plantilla" id="plantilla">
+                    <option value="0">Dos secciones con imágenes</option>
+                    <option value="1">Una sección con imágenes</option>
                 </select>
-                <button id="add">add!</button>
+                <button id="add">usar plantilla</button>
+                </div>
+                <div id="elementNoticia">
+
+
+                    <section class="plantilla0" id="plantilla0">
+                        <label for="titulo1">título de la sección 1: </label>
+                        <input type="text" name="titulo1" id="titulo1"><br>
+                        <textarea name="text1" id="text1" cols="45" rows="10"></textarea><br>
+                        <input type="file" name="img1" id="img1"><br>
+
+                        <label for="titulo2">título de la sección 2: </label>
+                        <input type="text" name="titulo2" id="titulo2"><br>
+                        <textarea name="text2" id="text2" cols="45" rows="10"></textarea><br>
+                        <input type="file" name="img2" id="img2"><br>
+                    </section>
+
+                    <section class="plantilla1" id="plantilla1">
+                        <label for="titulo1">título de la sección 1: </label>
+                        <input type="text" name="titulo1" id="titulo1"><br>
+                        <textarea name="text1" id="text1" cols="45" rows="10"></textarea><br>
+                        <input type="file" name="img1" id="img1"><br>
+
+                        <textarea name="text2" id="text2" cols="45" rows="10"></textarea><br>
+                        <input type="file" name="img2" id="img2"><br>
+                    </section>
+                </div>
                 <button type="submit" class="submit">Enviar todo y terminar</button>
             </form>
             <!--             <p class="parrafo">
