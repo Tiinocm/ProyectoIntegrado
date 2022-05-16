@@ -12,6 +12,7 @@
     grid-column: 1 / 4;
     grid-row: 1;
     background-color: #AEF2F2;
+    line-height: 100px;
   }
   .ham{
     grid-column: 1;
@@ -192,5 +193,8 @@
     float: right;
     margin-top: 20px;
   }
-  
+  .header{
+    color:black;
+    text-transform: uppercase;
+  }
   /* fin hamburguer */
