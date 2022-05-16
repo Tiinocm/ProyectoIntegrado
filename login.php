@@ -1,6 +1,6 @@
 <?php
 
-require_once "autoloader.php";
+require_once "autoloading.php";
 $security = new security();
 $loginMessage = $security->doLogin();
 
