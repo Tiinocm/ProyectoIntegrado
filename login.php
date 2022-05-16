@@ -42,7 +42,7 @@ $loginMessage = $security->doLogin();
         <div class="column box contenido has-text-centered">
         <h1 style="color: red"><?= $loginMessage ?></h1>
             <p class="formulario">
-            <form method="post" action="login.php">
+            <form method="POST" action="">
                 <label for="userName" class="label">userName: </label>
                 <input type="text" name="userName" id="userName" class="input">
                 <label for="password" class="label">Contraseña: </label>
