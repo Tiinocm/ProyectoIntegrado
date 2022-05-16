@@ -187,5 +187,10 @@
     transition-delay: .6s;
     transform: translateX(-100px);
   }
+  .logo{
+    width: 80px;
+    float: right;
+    margin-top: 20px;
+  }
   
   /* fin hamburguer */
