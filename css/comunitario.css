@@ -38,6 +38,7 @@
         bottom: 30%;
         z-index: 1;
         font-weight: bold;
+        font-family: Lora,Georgia,Times,Times New Roman,serif;
       }
 }
 
@@ -283,6 +284,7 @@ ul {
 a, a:visited{
   text-decoration: none;
   color: inherit;
+  font-family: Lora, Georgia, Times, Times New Roman, serif;
 }
 .header{
   color:black;
