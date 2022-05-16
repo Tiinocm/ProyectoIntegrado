@@ -67,7 +67,7 @@ class security extends connection
 
     public function register()
     {
-        if ($_POST > 0) {
+        if (count($_POST) > 0) {
             if ($_POST["password"] == $_POST["password2"]) {
                 $password = password_hash($_POST["password"], PASSWORD_BCRYPT);
                 $name = $_POST["name"];
