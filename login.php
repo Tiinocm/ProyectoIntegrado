@@ -1,3 +1,11 @@
+<?php
+
+/* require_once "autoloader.php";
+$security = new security();
+$loginMessage = $security->doLogin();
+ */
+?>
+
 <!DOCTYPE html>
 <html lang="es">
 
@@ -32,14 +40,15 @@
     <section class="section columns">
         <div class="column"></div>
         <div class="column box contenido has-text-centered">
+        <h1 style="color: red"><?= /* $loginMessage */ "a" ?></h1>
             <p class="formulario">
             <form method="post" action="">
-                <label for="Email" class="label">Email: </label>
-                <input type="email" name="email" id="Email" class="input">
+                <label for="userName" class="label">userName: </label>
+                <input type="text" name="userName" id="userName" class="input">
                 <label for="password" class="label">Contraseña: </label>
                 <input type="password" name="password" id="password" class="input">
                 <button class="button mt-1">Inicio</button>
-                <p>¿Todavía no tienes una cuenta? Registrate <a href="register.html">aquí</a></p>
+                <p>¿Todavía no tienes una cuenta? Registrate <a href="register.php">aquí</a></p>
             </form>
             </p>
         </div>

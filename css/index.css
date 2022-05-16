@@ -71,18 +71,18 @@
     content: '#';
   }
   /* por ahora todos los elementos son "even" debido a los ::before, pero la idea es añadir los odd y even como clases directamente desde js */
-  .mejorValoradas:nth-child(even) .titulo{
+  .par .titulo{
     float: left;
   }
-  .mejorValoradas:nth-child(even) .comunidad{
+  .par .comunidad{
     float: right;
   }
 
-  .noticiasScroll:nth-child(even) .titulo{
-    float: left;
-  }
-  .noticiasScroll:nth-child(even) .comunidad{
+  .impar .titulo{
     float: right;
+  }
+  .impar .comunidad{
+    float: left;
   }
 
 }
@@ -356,4 +356,5 @@ input[type="checkbox"] {
 
 a, a:visited{
   text-decoration: none;
+  color: inherit;
 }

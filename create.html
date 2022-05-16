@@ -1,51 +1,68 @@
 <!DOCTYPE html>
 <html lang="es">
-
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Creador de noticias</title>
-    <link rel="stylesheet" href="css/bulma.css">
+    <link rel="shortcut icon" href="img/CRONOS-icono.png" type="image/x-icon">
     <link rel="stylesheet" href="css/creacionNoticia.css">
+    <script src="create.js"></script>
+    <title>TítuloNoticia</title>
+    <style>
+        header::before{
+            background-image: url(img/zeri.png);
+        }
+    </style>
 </head>
-
 <body>
     <div class="grid">
-        <header class="header">Cronos</header>
+        <header class="header">
+            <img class="imgHeader" src="img/zeri.png" alt="">
+        </header>
         <aside class="ham">
             <input type="checkbox" id="active">
             <label for="active" class="menu-btn"><span></span></label>
             <label for="active" class="close"></label>
             <div class="wrapper">
                 <ul>
-                    <li><a href="inicioSesion.html">Iniciar Sesión</a></li>
-                    <li><a href="#">Crear mi propia noticia</a></li>
-                    <li><a href="index.html">Noticias destacadas</a></li>
-                    <li><a href="comunitario.html">Noticias comunitarias</a></li>
+                    <li><a href="login.php">Iniciar Sesión</a></li>
+                    <li><a href="create.html">Crear mi propia noticia</a></li>
+                    <li><a href="index.php">Noticias destacadas</a></li>
+                    <li><a href="comunitario.php">Noticias comunitarias</a></li>
                 </ul>
             </div>
         </aside>
-    </div>
-    <section id="noticia" class="columns">
-        <div class="column"></div>
-        <div class="column box is-two-fifths contenido mt-5">
-            <p class="block is-justify-content-center">
-            <h1 class="has-text-centered has-text-weight-bold">Crea tu noticia</h1>
-            <form method="post" action="" class="has-text-centered">
-                <label for="seleccionar" class="obligatorio">Título</label>
-                <input type="text" name="titulo" id="titulo"><br>   
-                <label for="seleccionar" class="mt-3 is-inline-block">Inserta un:</label>
-                <select id="seleccionar" name="seleccionar">
-                    <option value="texto">texto</option>
-                    <option value="multimedia">multimedia</option>
-                </select>
+        <section class="noticia">
+            <form action="" method="post">
+            <div class="titulo"> 
+                <label for="titulo" class="obligatorio">Título: </label>
+                <input type="text" name="titulo" id="titulo" placeholder="Inserte el título de la noticia" required><br>
+                <label for="img" class="obligatorio">imagen de portada: </label>
+                <input type="file" name="img" id="img" required>
+                <br>
+                <cite class="autor">Escrito por <a href="#" class="users">user</a></cite>
+                <div class="dia"> 9 Mayo 2022</div>
+            </div>
+
+            <div id="elementNoticia"></div>
+
+            <label for="element">añadir: </label>
+            <select name="element" id="element">
+                <option value="0">Texto</option>
+                <option value="1">multimedia</option>
+            </select>
+            <button id="add">add!</button>
+            <button type="submit" class="submit">Enviar todo y terminar</button>
             </form>
-        </p>
-        </div>
-        <div class="column"></div>
-    </section>
+<!--             <p class="parrafo">
+                Lorem fistrum ese que llega no te digo trigo por no llamarte Rodrigor llevame al sircoo se calle ustée. Amatomaa jarl va usté muy cargadoo qué dise usteer a gramenawer no te digo trigo por no llamarte Rodrigor.
+            </p>
+            <img class="imagen" src="img/Viego.jpg" alt="imagen de prueba. Splash-Art de viego">
+            <p class="parrafo">
+                Va usté muy cargadoo al ataquerl diodeno no puedor a wan no te digo trigo por no llamarte Rodrigor te voy a borrar el cerito la caidita caballo blanco caballo negroorl de la pradera a peich. Pecador torpedo sexuarl te voy a borrar el cerito.
+            </p> -->
 
+        </section>
+    </div>
 </body>
-
 </html>

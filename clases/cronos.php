@@ -2,6 +2,7 @@
 
 class cronos extends connection {
     protected $publicadas = [];
+    protected $noticia =  [];
 
     public function getNoticias($publicado)
     {
@@ -25,32 +26,42 @@ class cronos extends connection {
         }
     }
 
+    public function getNoticia($id)
+    {
+        /* 
+        SELECT noticias.id_noticia, noticias.usuario, noticias.fecha, noticias.titulo, noticias.imagen_portada, noticias.votos, comunidad.nombre, comunidad.id_comunidad, parrafos.posicion AS posicion_parrafos, parrafos.texto AS texto_parrafos, multimedia.posicion AS posicion_multimedia, multimedia.ruta AS ruta_multimedia FROM noticias INNER JOIN comunidad ON noticias.id_comunidad = comunidad.id_comunidad INNER JOIN parrafos ON parrafos.id_noticia = noticias.id_noticia INNER JOIN multimedia ON multimedia.id_noticia = noticias.id_noticia WHERE noticias.id_noticia = 1
+        */
+    }
+
     public function drawNoticias($lugar)
     {
         /* muestra por pantalla las noticias de index.html (cabe destacar que al haber dos formato de noticias diferentes $lugar identifica el formato que se le da dependiendo de donde deberían de ir) */
         $countFor = count($this->publicadas);
+        if ($lugar != "destacadas") {
+            $i = 3;
+        }else{
+            $countFor = 3;
+        }
+        $str = "";
         for ($i=0; $i < $countFor; $i++) { 
-            if ($lugar != "destacadas") {
-                $i = 3;
-            }else{
-                $countFor = 3;
-            }
-            $str = "<li class='noticia noti$i'>";
+            $num = ($i % 2 == 0) ? "par" : "impar";
+            $str .= "<li class='noticia noti$i $num'>";
             $str .= "<a href='noticiaIndividual.html?id=". $this->publicadas[$i]->getId() . "'><div class='titulo'>" . $this->publicadas[$i]->getTitulo() . "</div></a>";
             $str .= "<div class='comunidad'>" . $this->publicadas[$i]->getNombreComunidad() . "</div>
             </li>";
             if ($lugar != "destacadas") {
-                $str .= '<li class="textNoticia"><a href="noticiaIndividual.html?id=' . $this->publicadas[$i]->getId() . '"<div class="tituloT">' . $this->publicadas[$i]->getTitulo() . '</div></a></li>';
+                $str .= '<li class="textNoticia"><a href="noticiaIndividual.html?id=' . $this->publicadas[$i]->getId() . '"><div class="tituloT">' . $this->publicadas[$i]->getTitulo() . '</div></a></li>';
             }
-            echo $str;  
         }
+        echo $str;  
     }
 
     public function drawComunitario()
     {
         /* muestra por pantalla las noticias de comunitario.php */
         for ($i=0; $i < count($this->publicadas); $i++) { 
-            $str = "<li class='noticia noti$i'>";
+            $num = ($i % 2 == 0) ? "par" : "impar";
+            $str = "<li class='noticia noti$i $num'>";
             $str .= "<a href='noticiaIndividual.html?id=". $this->publicadas[$i]->getId() . "'><div class='titulo'>" . $this->publicadas[$i]->getTitulo() . "</div></a>";
             $str .= "<div class='comunidad'>" . $this->publicadas[$i]->getNombreComunidad() . "</div>
             </li>";
