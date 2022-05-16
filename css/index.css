@@ -19,6 +19,7 @@
     grid-column: 1 / 4;
     grid-row: 1;
     background-color: #AEF2F2;
+    line-height: 100px;
   }
   .ham{
     grid-column: 1;
@@ -101,6 +102,7 @@
       grid-column: 1 / 5;
       grid-row: 1;
       background-color: #AEF2F2;
+      line-height: 100px;
     }
     .ham{
       grid-column: 1;
@@ -357,4 +359,8 @@ input[type="checkbox"] {
 a, a:visited{
   text-decoration: none;
   color: inherit;
+}
+.logo{
+  width: 80px;
+  float: right;
 }
