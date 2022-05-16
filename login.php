@@ -17,6 +17,9 @@ $loginMessage = $security->doLogin();
     <title>Iniciar sesión</title>
     <link rel="stylesheet" href="css/bulma.css">
     <link rel="stylesheet" href="css/inicioSesion.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300&family=Lora&display=swap" rel="stylesheet">
 </head>
 
 <body>
@@ -40,9 +43,9 @@ $loginMessage = $security->doLogin();
     <section class="section columns">
         <div class="column"></div>
         <div class="column box contenido has-text-centered">
-        <h1 style="color: red"><?= $loginMessage ?></h1>
+            <h1 style="color: red"><?= $loginMessage ?></h1>
             <p class="formulario">
-            <form method="post" action="login.php">
+            <form method="POST" action="">
                 <label for="userName" class="label">userName: </label>
                 <input type="text" name="userName" id="userName" class="input">
                 <label for="password" class="label">Contraseña: </label>

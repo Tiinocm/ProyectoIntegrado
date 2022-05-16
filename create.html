@@ -1,19 +1,24 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="img/CRONOS-icono.png" type="image/x-icon">
     <link rel="stylesheet" href="css/creacionNoticia.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300&family=Lora&display=swap" rel="stylesheet">
     <script src="create.js"></script>
     <title>TítuloNoticia</title>
     <style>
-        header::before{
+        header::before {
             background-image: url(img/zeri.png);
         }
     </style>
 </head>
+
 <body>
     <div class="grid">
         <header class="header">
@@ -34,27 +39,28 @@
         </aside>
         <section class="noticia">
             <form action="" method="post">
-            <div class="titulo"> 
-                <label for="titulo" class="obligatorio">Título: </label>
-                <input type="text" name="titulo" id="titulo" placeholder="Inserte el título de la noticia" required><br>
-                <label for="img" class="obligatorio">imagen de portada: </label>
-                <input type="file" name="img" id="img" required>
-                <br>
-                <cite class="autor">Escrito por <a href="#" class="users">user</a></cite>
-                <div class="dia"> 9 Mayo 2022</div>
-            </div>
+                <div class="titulo">
+                    <label for="titulo" class="obligatorio">Título: </label>
+                    <input type="text" name="titulo" id="titulo" placeholder="Inserte el título de la noticia"
+                        required><br>
+                    <label for="img" class="obligatorio">imagen de portada: </label>
+                    <input type="file" name="img" id="img" required>
+                    <br>
+                    <cite class="autor">Escrito por <a href="#" class="users">user</a></cite>
+                    <div class="dia"> 9 Mayo 2022</div>
+                </div>
 
-            <div id="elementNoticia"></div>
+                <div id="elementNoticia"></div>
 
-            <label for="element">añadir: </label>
-            <select name="element" id="element">
-                <option value="0">Texto</option>
-                <option value="1">multimedia</option>
-            </select>
-            <button id="add">add!</button>
-            <button type="submit" class="submit">Enviar todo y terminar</button>
+                <label for="element">añadir: </label>
+                <select name="element" id="element">
+                    <option value="0">Texto</option>
+                    <option value="1">multimedia</option>
+                </select>
+                <button id="add">add!</button>
+                <button type="submit" class="submit">Enviar todo y terminar</button>
             </form>
-<!--             <p class="parrafo">
+            <!--             <p class="parrafo">
                 Lorem fistrum ese que llega no te digo trigo por no llamarte Rodrigor llevame al sircoo se calle ustée. Amatomaa jarl va usté muy cargadoo qué dise usteer a gramenawer no te digo trigo por no llamarte Rodrigor.
             </p>
             <img class="imagen" src="img/Viego.jpg" alt="imagen de prueba. Splash-Art de viego">
@@ -65,4 +71,5 @@
         </section>
     </div>
 </body>
+
 </html>

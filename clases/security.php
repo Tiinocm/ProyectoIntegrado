@@ -22,7 +22,7 @@ class security extends connection
     {
         if (count($_POST) > 0) {
             $user = $this->getUser($_POST["userName"]);
-            $_SESSION["loggedIn"] = $this->checkUser($user, $_POST["userPassword"]) ? $user["userName"] : false;
+            $_SESSION["loggedIn"] = $this->checkUser($user, $_POST["password"]) ? $user[0]["userName"] : false;
             if ($_SESSION["loggedIn"]) {
                 header("Location: " . $this->homePage);
             } else {
@@ -42,8 +42,8 @@ class security extends connection
 
     private function checkUser($user, $userPassword)
     {
-        if ($user) {
-            return $this->checkPassword($user["password"], $userPassword);
+        if ($user) {    
+            return $this->checkPassword($user[0]["password"], $userPassword);
         } else {
             return false;
         }
@@ -58,7 +58,7 @@ class security extends connection
     {
         $sql = "SELECT * FROM usuario WHERE userName = '$userName'";
         $result = $this->conn->query($sql);
-        if ($result->num_rows > 0) {
+        if ($result->rowCount() > 0) {
             return $result->fetchAll(PDO::FETCH_ASSOC);
         } else {
             return false;
@@ -70,7 +70,7 @@ class security extends connection
         if (count($_POST) > 0) {
             if ($_POST["password"] == $_POST["password2"]) {
                 try {
-                                    $password = password_hash($_POST["password"], PASSWORD_BCRYPT);
+                $password = password_hash($_POST["password"], PASSWORD_BCRYPT);
                 $name = $_POST["name"];
                 $fecha = date("j M Y");
                 $email = $_POST["email"];
