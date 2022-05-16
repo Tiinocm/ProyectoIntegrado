@@ -19,6 +19,8 @@
     grid-column: 1 / 4;
     grid-row: 1;
     background-color: #AEF2F2;
+    line-height: 100px;
+    font-family: Lora,Georgia,Times,Times New Roman,serif;
   }
   .ham{
     grid-column: 1;
@@ -56,6 +58,7 @@
     bottom: 30%;
     z-index: 1;
     font-weight: bold;
+    font-family: Lora,Georgia,Times,Times New Roman,serif;
   }
 
   .comunidad{
@@ -101,6 +104,7 @@
       grid-column: 1 / 5;
       grid-row: 1;
       background-color: #AEF2F2;
+      line-height: 100px;
     }
     .ham{
       grid-column: 1;
@@ -161,6 +165,7 @@
       padding: 5px;
       color: white;
       width: fit-content;
+      font-family: Lora,Georgia,Times,Times New Roman,serif;
     }
   
     .comunidad::before{
@@ -357,4 +362,13 @@ input[type="checkbox"] {
 a, a:visited{
   text-decoration: none;
   color: inherit;
+}
+.header{
+  color:black;
+  text-transform: uppercase;
+}
+.logo{
+  width: 80px;
+  float: right;
+  margin-top: 20px;
 }
