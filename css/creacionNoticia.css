@@ -190,18 +190,16 @@
     justify-content: center;
   }
 
-  .plantilla0, .plantilla1{
-    margin-top: 20px;
-    width: 100%;
-  }
-  .plantilla0 *, .plantilla1 *{
-    margin: 5px;
-  }
 
 }
 
 .plantilla0, .plantilla1{
   display: none;
+  margin-top: 20px;
+  width: 100%;
+}
+.plantilla0 *, .plantilla1 *{
+  margin: 5px;
 }
 
 html, body {
