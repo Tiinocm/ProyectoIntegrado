@@ -37,6 +37,8 @@ class security extends connection
     {
         if (isset($_SESSION["loggedIn"]) && $_SESSION["loggedIn"]) {
             return $_SESSION["loggedIn"];
+        }else{
+            return false;
         }
     }
 
