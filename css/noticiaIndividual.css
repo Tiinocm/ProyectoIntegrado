@@ -28,6 +28,7 @@
         padding: 10px;
         border-radius: 5px;
         box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+        font-family: Lora, Georgia, Times, Times New Roman, serif;
     }
     .imgHeader{
         width: 100%;
@@ -64,6 +65,7 @@
     .parrafo {
         margin: 10px;
         text-align: left;
+        font-family: Lora, Georgia, Times, Times New Roman, serif;
     }
 
     .primero {
@@ -144,6 +146,7 @@
         margin: 10px;
         text-align: left;
         font-size: 20px;
+        font-family: Lora, Georgia, Times, Times New Roman, serif;
     }
 
     .primero {
