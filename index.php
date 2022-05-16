@@ -14,10 +14,13 @@ $cronos->getNoticias(1);
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="img/CRONOS-icono.png" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300&family=Lora&display=swap" rel="stylesheet">
     <title>Cronos</title>
     <link rel="stylesheet" href="css/index.css">
     <style>
-       <?php $cronos->styleNoticias() ?> 
+        <?php $cronos->styleNoticias() ?>
     </style>
 </head>
 
@@ -45,7 +48,7 @@ $cronos->getNoticias(1);
             <ul class="mejorValoradas" id="mejorValoradas">
                 <!-- cada "li" es una noticia. Las noticias se generarán mediante PHP.-->
 
-                    <?php $cronos->drawNoticias("destacadas") ?>
+                <?php $cronos->drawNoticias("destacadas") ?>
             </ul>
         </section>
         <section class="scroll">
@@ -57,4 +60,5 @@ $cronos->getNoticias(1);
         </section>
     </div>
 </body>
+
 </html>
