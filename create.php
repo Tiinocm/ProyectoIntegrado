@@ -1,3 +1,10 @@
+<?php
+require_once "autoloading.php";
+$security = new security();
+$security->checkLoggedIn();
+
+?>
+
 <!DOCTYPE html>
 <html lang="es">
 
@@ -46,7 +53,7 @@
                     <label for="img" class="obligatorio">imagen de portada: </label>
                     <input type="file" name="img" id="img" required>
                     <br>
-                    <cite class="autor">Escrito por <a href="#" class="users">user</a></cite>
+                    <cite class="autor">Escrito por <a href="#" class="users"><?= $security->getUserData() ?></a></cite>
                     <div class="dia"> 9 Mayo 2022</div>
                 </div>
                 <div class="selectorPlantilla">

@@ -32,7 +32,7 @@ $cronos->getNoticias(1);
             <div class="wrapper">
                 <ul>
                     <li><a href="login.php">Iniciar Sesión</a></li>
-                    <li><a href="create.html">Crear mi propia noticia</a></li>
+                    <li><a href="create.php">Crear mi propia noticia</a></li>
                     <li><a href="index.php">Noticias destacadas</a></li>
                     <li><a href="#">Noticias comunitarias</a></li>
                 </ul>
