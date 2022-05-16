@@ -2,6 +2,10 @@
 #AEF2F2: Color Principal
 #7BA1A6: Color Secundario, Opacidad al 75%
 */
+@font-face {
+  font-family: Lora;
+  src: url(fonts/static/Lora-regular);
+}
 @media (max-width: 639px) {
   .gridPC, li.textNoticia{
     display: none;
@@ -155,6 +159,7 @@
       bottom: 30%;
       z-index: 1;
       font-weight: bold;
+      font-family: Lora,Georgia,Times,Times New Roman,serif;
     }
 
     .comunidad{
@@ -196,6 +201,10 @@
       font-weight: bold;
       color: white;
       font-size: 1.2em;
+    }
+
+    .tituloT{
+      font-family: Lora,Georgia,Times,Times New Roman,serif;
     }
 }
 /* eliminar bordes blancos al rededor del contenido */
