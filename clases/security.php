@@ -69,15 +69,21 @@ class security extends connection
     {
         if (count($_POST) > 0) {
             if ($_POST["password"] == $_POST["password2"]) {
-                $password = password_hash($_POST["password"], PASSWORD_BCRYPT);
+                try {
+                                    $password = password_hash($_POST["password"], PASSWORD_BCRYPT);
                 $name = $_POST["name"];
                 $fecha = date("j M Y");
                 $email = $_POST["email"];
                 $sql = "INSERT INTO usuario(userName, moderador, fecha_creacion, email, password) VALUES ('$name',0,'$fecha','$email','$password')";
                 $this->conn->query($sql);
                 header("Location: " . $this->loginPage);
+                } catch (PDOException $e) {
+                    echo 'Falló la consulta: ' . $e->getMessage();
+                }
+
             }else{
-                return "las contraseñas no coinciden";
+                $str = "las contraseñas no coinciden";
+                return  $str;
             }
 
         }
