@@ -75,6 +75,7 @@ class security extends connection
                 $email = $_POST["email"];
                 $sql = "INSERT INTO usuario(userName, moderador, fecha_creacion, email, password) VALUES ('$name',0,'$fecha','$email','$password')";
                 $this->conn->query($sql);
+                header("Location: " . $this->loginPage);
             }else{
                 return "las contraseñas no coinciden";
             }
