@@ -20,6 +20,7 @@
     grid-row: 1;
     background-color: #AEF2F2;
     line-height: 100px;
+    font-family: Lora,Georgia,Times,Times New Roman,serif;
   }
   .ham{
     grid-column: 1;
@@ -57,6 +58,7 @@
     bottom: 30%;
     z-index: 1;
     font-weight: bold;
+    font-family: Lora,Georgia,Times,Times New Roman,serif;
   }
 
   .comunidad{
@@ -163,6 +165,7 @@
       padding: 5px;
       color: white;
       width: fit-content;
+      font-family: Lora,Georgia,Times,Times New Roman,serif;
     }
   
     .comunidad::before{
