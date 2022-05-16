@@ -64,6 +64,7 @@
     .parrafo {
         margin: 10px;
         text-align: left;
+        font-family: Lora, Georgia, Times, Times New Roman, serif;
     }
 
     .primero {
@@ -144,6 +145,7 @@
         margin: 10px;
         text-align: left;
         font-size: 20px;
+        font-family: Lora, Georgia, Times, Times New Roman, serif;
     }
 
     .primero {
