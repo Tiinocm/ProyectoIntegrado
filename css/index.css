@@ -363,5 +363,5 @@ a, a:visited{
 .logo{
   width: 80px;
   float: right;
-  line-height: 100px;
+  margin-top: 20px;
 }
