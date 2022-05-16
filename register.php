@@ -52,8 +52,7 @@ $security->register();
 
                 <label for="name" class="name label">Nombre de Usuario: </label>
                 <input type="name" name="name" id="name" class="input">
-                
-                <button class="button mt-1">Inicio</button>
+                <button type="submit" class="button mt-1">Inicio</button>
                 <p>¿Ya tienes una cuenta? Inicie sesión <a href="inicioSesion.html">aquí</a></p>
             </form>
             </p>
