@@ -68,8 +68,17 @@ class security extends connection
     public function register()
     {
         if ($_POST > 0) {
-            $password = password_hash($_POST["password"], PASSWORD_BCRYPT);
-            $sql = "INSERT INTO usuario(userName, moderador, fecha_creacion, email, password) VALUES ('','[value-2]','[value-3]','[value-4]','[value-5]')";
+            if ($_POST["password"] == $_POST["password2"]) {
+                $password = password_hash($_POST["password"], PASSWORD_BCRYPT);
+                $name = $_POST["name"];
+                $fecha = date("j M Y");
+                $email = $_POST["email"];
+                $sql = "INSERT INTO usuario(userName, moderador, fecha_creacion, email, password) VALUES ('$name',0,'$fecha','$email','$password')";
+                $this->conn->query($sql);
+            }else{
+                return "las contraseñas no coinciden";
+            }
+
         }
     }
 }
