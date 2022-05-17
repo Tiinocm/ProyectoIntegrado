@@ -160,13 +160,27 @@ class cronos extends connection {
             $maxNoticia = $this->conn->query($sql);
             $maxNoticia = $maxNoticia->fetchAll(PDO::FETCH_ASSOC);
             return $maxNoticia[0]["id_noticia"];
-        } catch (\Throwable $th) {
-            //throw $th;
+        } catch (PDOException $e) {
+            echo 'Falló la consulta: ' . $e->getMessage();
         }
     }
 
-    public function insertImagen()
+    public function selectComunidad()
     {
+        /* <option value="0">League of legends</option> */
+        try {
+            $sql = "SELECT id_comunidad, nombre from comunidad";
+            $comunidades = $this->conn->query($sql);
+            $comunidades = $comunidades->fetchAll(PDO::FETCH_ASSOC);
+
+            for ($i=0; $i < count($comunidades); $i++) { 
+                $str = '<option value="' . $comunidades[$i]["id_comunidad"] . '">' . $comunidades[$i]["nombre"] . '</option>';
+            }
+            echo $str;
+
+        } catch (PDOException $e) {
+            echo 'Falló la consulta: ' . $e->getMessage();
+        }
 
     }
 }

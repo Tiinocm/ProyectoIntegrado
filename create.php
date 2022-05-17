@@ -2,7 +2,7 @@
 require_once "autoloading.php";
 $security = new security();
 $security->checkLoggedIn();
-
+$cronos = new cronos;
 ?>
 
 <!DOCTYPE html>
@@ -58,9 +58,9 @@ $security->checkLoggedIn();
                 </div>
 
                 <div class="comunidades">
-                    <label for="comunidades">Selecciona la comunidad</label><br>
+                    <label for="comunidades">Selecciona la comunidad: </label><br>
                     <select name="comunidades" id="comunidades">
-                        <option value="0">League of legends</option>
+                        <?php $cronos->selectComunidad() ?>
                     </select>
                 </div>
 
