@@ -23,7 +23,7 @@ function main() {
     form.addEventListener("submit", function(e) {
         e.preventDefault();
         let formData = new FormData(this);
-        formData.append("text1", text1.innerHTML);
+        formData.append("text1", text1.value);
         const xhhtp = new XMLHttpRequest();
         xhhtp.addEventListener("readystatechange", function(){
             if (this.readyState == 4 && this.status == 200) {
