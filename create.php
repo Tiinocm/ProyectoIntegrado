@@ -95,5 +95,4 @@ $security->checkLoggedIn();
         </section>
     </div>
 </body>
-
 </html>
