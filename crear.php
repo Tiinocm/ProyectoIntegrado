@@ -1,3 +1,5 @@
 <?php
 
-echo json_encode($_POST);
+$prueba = "img/" . $_POST["img"]["name"];
+
+echo json_encode($prueba);
