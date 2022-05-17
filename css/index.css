@@ -109,6 +109,7 @@
       grid-row: 1;
       background-color: #AEF2F2;
       line-height: 100px;
+      font-size: 32px;
     }
     .ham{
       grid-column: 1;
