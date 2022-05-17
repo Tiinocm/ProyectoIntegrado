@@ -20,6 +20,7 @@ $security->register();
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300&family=Lora&display=swap" rel="stylesheet">
     <title>TítuloNoticia</title>
+    <script src="noticia.js"></script>
     <style>
         header::before {
             background-image: url(img/zeri.png);

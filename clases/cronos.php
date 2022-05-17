@@ -35,6 +35,30 @@ class cronos extends connection {
             FROM `noticias` WHERE noticias.id_noticia = 8;
             luego un if de plantilla para conceatenar el resto de la consulta
         */
+
+        try {
+            $plantilla = "SELECT plantilla from noticias WHERE id_noticias = $id";
+            $sqlPlantilla = $this->conn->query($plantilla);
+            $sqlPlantilla = $sqlPlantilla->fetchAll(PDO::FETCH_ASSOC);
+            $plantilla = $sqlPlantilla[0]["plantilla"];
+            if ($plantilla == 0) {
+                $strPlantilla = "plantilla0.titulo1, plantilla0.parrafo1, plantilla0.img1, plantilla0.titulo2, plantilla0.parrafo2, plantilla0.img2";
+            }else{
+                $strPlantilla = "plantilla1.titulo1, plantilla1.parrafo1, plantilla1.img1, plantilla1.parrafo2, plantilla1.img2";
+            }
+            $plantillaNum = "plantilla" . $plantilla;
+            $sql = "SELECT fecha, 
+            (SELECT comunidad.nombre from comunidad where comunidad.id_comunidad = noticias.id_comunidad) AS nombre_comunidad,
+            usuario, votos, imagen_portada, titulo, plantilla, $strPlantilla
+            FROM `noticias`
+            INNER JOIN $plantillaNum on noticias.id_noticia = $plantillaNum.id_noticia
+            WHERE noticias.id_noticia = $id";
+
+            $sqlQuery = $this->conn->query($sql);
+            return $sqlQuery->fetchAll(PDO::FETCH_ASSOC);
+        } catch (PDOException $e) {
+            echo 'Falló la consulta: ' . $e->getMessage();
+        }
     }
 
     public function drawNoticias($lugar)
