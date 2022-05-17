@@ -1,3 +1,12 @@
+<?php
+require_once "autoloading.php";
+$security = new security();
+$security->register();
+
+
+?>
+
+
 <!DOCTYPE html>
 <html lang="es">
 
@@ -29,7 +38,7 @@
             <label for="active" class="close"></label>
             <div class="wrapper">
                 <ul>
-                    <li><a href="login.php">Iniciar Sesión</a></li>
+                    <li><a href="login.php"><?= ($security->getUserData()) ? $security->getUserData() : "Iniciar Sesión" ?></a></li>
                     <li><a href="create.php">Crear mi propia noticia</a></li>
                     <li><a href="index.php">Noticias destacadas</a></li>
                     <li><a href="comunitario.php">Noticias comunitarias</a></li>
