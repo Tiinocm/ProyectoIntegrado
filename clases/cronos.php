@@ -39,6 +39,7 @@ class cronos extends connection {
         $countFor = count($this->publicadas);
         if ($lugar != "destacadas") {
             $i = 3;
+            echo "a";
         }else{
             $countFor = 3;
         }
