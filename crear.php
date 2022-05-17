@@ -1,7 +1,7 @@
 <?php
 
-$cronos = new cronos;
+$location = "img/" . $_POST["img"]["name"];
 
-$prueba = $cronos->insertNoticia();
+echo json_encode($location);
 
-echo json_encode($prueba);
+?>
