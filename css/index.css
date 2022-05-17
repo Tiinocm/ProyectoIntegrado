@@ -20,6 +20,7 @@
   }
   
   .header{
+    /* Cabecera principal para la mayoría de las páginas */
     grid-column: 1 / 4;
     grid-row: 1;
     background-color: #AEF2F2;
@@ -35,6 +36,7 @@
   }
 
   .ham{
+    /* Posición del hamburger */
     grid-column: 1;
     grid-row: 1;
   }
@@ -178,6 +180,7 @@
     }
 
     .comunidad{
+      /* Apartado que nombra donde pertenece cada noticia */
       background-color: rgb(255, 122, 123, 0.8);
       position: relative;
       float: right;
@@ -199,6 +202,7 @@
     }
 
     .noticiasScroll{
+      /* Noticias que están debajo de las destacadas */
       display: grid;
       grid-template-columns: repeat(3, 1fr);
       grid-gap: 5px;
@@ -388,10 +392,12 @@ a, a:visited{
   color: inherit;
 }
 .header{
+  /* Transformación del texto del título */
   color:black;
   text-transform: uppercase;
 }
 .logo{
+  /* Posición de la imagen del logo */
   width: 80px;
   float: right;
   margin-top: 20px;
