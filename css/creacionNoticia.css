@@ -364,6 +364,10 @@ input[type="checkbox"] {
   content: "*";
   color: red;
 }
+
+.obligatorio{
+  font-family: Lora,Georgia,Times,Times New Roman,serif;
+}
 .submit{
   margin-top: 20px;
 }
