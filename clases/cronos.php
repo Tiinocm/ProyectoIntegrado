@@ -172,9 +172,9 @@ class cronos extends connection {
             $sql = "SELECT id_comunidad, nombre from comunidad";
             $comunidades = $this->conn->query($sql);
             $comunidades = $comunidades->fetchAll(PDO::FETCH_ASSOC);
-
+            $str = "";
             for ($i=0; $i < count($comunidades); $i++) { 
-                $str = '<option value="' . $comunidades[$i]["id_comunidad"] . '">' . $comunidades[$i]["nombre"] . '</option>';
+                $str .= '<option value="' . $comunidades[$i]["id_comunidad"] . '">' . $comunidades[$i]["nombre"] . '</option>';
             }
             echo $str;
 
