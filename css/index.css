@@ -25,6 +25,7 @@
     background-color: #AEF2F2;
     line-height: 100px;
     font-family: Lora,Georgia,Times,Times New Roman,serif;
+    font-size: 16px;
   }
   .ham{
     grid-column: 1;
