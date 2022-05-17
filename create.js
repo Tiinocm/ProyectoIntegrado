@@ -31,7 +31,7 @@ function main() {
         formData.append("text2", text2.value);
         formData.append("text3", text3.value);
         formData.append("text4", text4.value);  
-        formData.append("img", img);
+        formData.append("img", img["name"]);
         const xhhtp = new XMLHttpRequest();
         xhhtp.addEventListener("readystatechange", function(){
             if (this.readyState == 4 && this.status == 200) {
