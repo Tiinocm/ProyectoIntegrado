@@ -2,6 +2,8 @@
 require_once "autoloading.php";
 $cronos = new cronos;
 $cronos->getNoticias(1);
+$security = new security();
+$security->checkLoggedIn();
 ?>
 
 <!DOCTYPE html>
@@ -31,7 +33,7 @@ $cronos->getNoticias(1);
             <label for="active" class="close"></label>
             <div class="wrapper">
                 <ul>
-                    <li><a href="login.php">Iniciar Sesión</a></li>
+                    <li><a href="login.php"><?= ($security->getUserData()) ? $security->getUserData() : "Iniciar Sesión" ?></a></li>
                     <li><a href="create.php">Crear mi propia noticia</a></li>
                     <li><a href="index.php">Noticias destacadas</a></li>
                     <li><a href="#">Noticias comunitarias</a></li>
