@@ -1,7 +1,7 @@
 <?php
 require_once "autoloading.php";
 $security = new security();
-/* $security->checkLoggedIn(); */
+$security->checkLoggedIn();
 
 ?>
 
