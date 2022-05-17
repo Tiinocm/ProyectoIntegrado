@@ -23,6 +23,7 @@
 
 @media (min-width:640px) {
     .grid{
+      /* Clase padre */
         display: grid;
         grid-template-columns: repeat(4, 1fr);
         grid-gap: 5px;
