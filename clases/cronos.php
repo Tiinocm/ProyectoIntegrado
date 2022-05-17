@@ -91,5 +91,13 @@ class cronos extends connection {
     public function insertNoticia()
     {
         /* INSERT INTO `plantilla1`(`id_noticia`, `titulo1`, `parrafo1`, `img1`, `parrafo2`, `img2`) VALUES ('[value-1]','[value-2]','[value-3]','[value-4]','[value-5]','[value-6]') */
+        $location = "img/" . $_POST["img"]["name"];
+        return $location;
+
+    }
+
+    public function insertImagen()
+    {
+
     }
 }
