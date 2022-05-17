@@ -46,7 +46,7 @@ $security->checkLoggedIn();
         </aside>
 
         <section class="noticia">
-            <form action="" method="post">
+            <form action="" method="post" id="formulario">
                 <div class="titulo">
                     <label for="titulo" class="obligatorio">Título: </label>
                     <input type="text" name="titulo" id="titulo" placeholder="Inserte el título de la noticia" required><br>
@@ -91,13 +91,6 @@ $security->checkLoggedIn();
                 </div>
                 <button type="submit" class="submit">Enviar todo y terminar</button>
             </form>
-            <!--             <p class="parrafo">
-                Lorem fistrum ese que llega no te digo trigo por no llamarte Rodrigor llevame al sircoo se calle ustée. Amatomaa jarl va usté muy cargadoo qué dise usteer a gramenawer no te digo trigo por no llamarte Rodrigor.
-            </p>
-            <img class="imagen" src="img/Viego.jpg" alt="imagen de prueba. Splash-Art de viego">
-            <p class="parrafo">
-                Va usté muy cargadoo al ataquerl diodeno no puedor a wan no te digo trigo por no llamarte Rodrigor te voy a borrar el cerito la caidita caballo blanco caballo negroorl de la pradera a peich. Pecador torpedo sexuarl te voy a borrar el cerito.
-            </p> -->
 
         </section>
     </div>
