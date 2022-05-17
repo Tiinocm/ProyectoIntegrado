@@ -119,6 +119,12 @@
       line-height: 100px;
       font-size: 32px;
     }
+
+    .titulares{
+      font-family: 'Bebas Neue', cursive;
+      font-size: 32px;
+    }
+
     .ham{
       grid-column: 1;
       grid-row: 1;
