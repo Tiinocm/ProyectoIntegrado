@@ -151,7 +151,8 @@ class cronos extends connection {
         try {
             $sql = "SELECT id_noticia FROM noticias WHERE id_noticia = (SELECT max(id_noticia) FROM noticias)";
             $maxNoticia = $this->conn->query($sql);
-            return $maxNoticia->fetchAll(PDO::FETCH_ASSOC);
+            $maxNoticia = $maxNoticia->fetchAll(PDO::FETCH_ASSOC);
+            return $maxNoticia[0]["id_noticia"];
         } catch (\Throwable $th) {
             //throw $th;
         }
