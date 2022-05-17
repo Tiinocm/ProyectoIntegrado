@@ -10,9 +10,9 @@ class noticia
     protected $imagenPortada;
     protected $publico;
     protected $titulo;
-    protected $posiciones;
+    protected $plantilla;
 
-    public function __construct($id, $nombreComunidad, $usuario, $fecha, $votos, $imagenPortada, $publico, $titulo, $posiciones)
+    public function __construct($id, $nombreComunidad, $usuario, $fecha, $votos, $imagenPortada, $publico, $titulo, $plantilla)
     {
         $this->id = $id;
         $this->nombreComunidad = $nombreComunidad;
@@ -22,7 +22,7 @@ class noticia
         $this->imagenPortada = $imagenPortada;
         $this->publico = $publico;
         $this->titulo = $titulo;
-        $this->posiciones = $posiciones;
+        $this->plantilla = $plantilla;
     }
 
     private function formatoFecha($fecha)

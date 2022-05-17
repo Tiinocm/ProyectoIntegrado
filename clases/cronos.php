@@ -12,14 +12,14 @@ class cronos extends connection {
             $publicado = 0 noticias NO publicadas
         */
         try {
-            $sql = "SELECT noticias.id_noticia, comunidad.nombre, noticias.usuario, noticias.fecha, noticias.votos, noticias.imagen_portada, noticias.publicidad, noticias.titulo, noticias.posiciones from noticias
+            $sql = "SELECT noticias.id_noticia, comunidad.nombre, noticias.usuario, noticias.fecha, noticias.votos, noticias.imagen_portada, noticias.publicidad, noticias.titulo, noticias.plantilla from noticias
             inner join comunidad on noticias.id_comunidad = comunidad.id_comunidad
             where publicidad = $publicado ORDER BY votos DESC";
             $rows = $this->conn->query($sql);
             $rows = $rows->fetchAll(PDO::FETCH_ASSOC);
 
             for ($i=0; $i < count($rows); $i++) { 
-                array_push($this->publicadas, new noticia($rows[$i]["id_noticia"], $rows[$i]["nombre"], $rows[$i]["usuario"], $rows[$i]["fecha"], $rows[$i]["votos"], $rows[$i]["imagen_portada"], $rows[$i]["publicidad"], $rows[$i]["titulo"], $rows[$i]["posiciones"]));
+                array_push($this->publicadas, new noticia($rows[$i]["id_noticia"], $rows[$i]["nombre"], $rows[$i]["usuario"], $rows[$i]["fecha"], $rows[$i]["votos"], $rows[$i]["imagen_portada"], $rows[$i]["publicidad"], $rows[$i]["titulo"], $rows[$i]["plantilla"]));
             }
         } catch (PDOException $e) {
             echo 'Falló la consulta: ' . $e->getMessage();
