@@ -45,7 +45,7 @@ function main() {
         xhhtp.addEventListener("readystatechange", function(){
             if (this.readyState == 4 && this.status == 200) {
                 let data = JSON.parse(this.responseText);
-                console.table(data);
+                console.log(data);
             }
         });
         xhhtp.open("POST", "crear.php", true);
