@@ -80,8 +80,8 @@ $security->checkLoggedIn();
                     </section>
 
                     <section class="plantilla1" id="plantilla1">
-                        <label for="titulo1">título de la sección 1: </label>
-                        <input type="text" name="titulo1" id="titulo1"><br>
+                        <label for="titulo3">título de la sección 1: </label>
+                        <input type="text" name="titulo3" id="titulo3"><br>
                         <textarea name="text1" id="text1" cols="45" rows="10"></textarea><br>
                         <input type="file" name="img1" id="img1"><br>
 
