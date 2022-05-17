@@ -46,11 +46,11 @@ class cronos extends connection {
         for ($i=0; $i < $countFor; $i++) { 
             $num = ($i % 2 == 0) ? "par" : "impar";
             $str .= "<li class='noticia noti$i $num'>";
-            $str .= "<a href='noticiaIndividual.html?id=". $this->publicadas[$i]->getId() . "'><div class='titulo'>" . $this->publicadas[$i]->getTitulo() . "</div></a>";
+            $str .= "<a href='noticiaIndividual.php?id=". $this->publicadas[$i]->getId() . "'><div class='titulo'>" . $this->publicadas[$i]->getTitulo() . "</div></a>";
             $str .= "<div class='comunidad'>" . $this->publicadas[$i]->getNombreComunidad() . "</div>
             </li>";
             if ($lugar != "destacadas") {
-                $str .= '<li class="textNoticia"><a href="noticiaIndividual.html?id=' . $this->publicadas[$i]->getId() . '"><div class="tituloT">' . $this->publicadas[$i]->getTitulo() . '</div></a></li>';
+                $str .= '<li class="textNoticia"><a href="noticiaIndividual.php?id=' . $this->publicadas[$i]->getId() . '"><div class="tituloT">' . $this->publicadas[$i]->getTitulo() . '</div></a></li>';
             }
         }
         echo $str;  
@@ -62,10 +62,10 @@ class cronos extends connection {
         for ($i=0; $i < count($this->publicadas); $i++) { 
             $num = ($i % 2 == 0) ? "par" : "impar";
             $str = "<li class='noticia noti$i $num'>";
-            $str .= "<a href='noticiaIndividual.html?id=". $this->publicadas[$i]->getId() . "'><div class='titulo'>" . $this->publicadas[$i]->getTitulo() . "</div></a>";
+            $str .= "<a href='noticiaIndividual.php?id=". $this->publicadas[$i]->getId() . "'><div class='titulo'>" . $this->publicadas[$i]->getTitulo() . "</div></a>";
             $str .= "<div class='comunidad'>" . $this->publicadas[$i]->getNombreComunidad() . "</div>
             </li>";
-                $str .= '<li class="textNoticia"><a href="noticiaIndividual.html?id=' . $this->publicadas[$i]->getId() . '"<div class="tituloT">' . $this->publicadas[$i]->getTitulo() . '</div></a></li>';
+                $str .= '<li class="textNoticia"><a href="noticiaIndividual.php?id=' . $this->publicadas[$i]->getId() . '"<div class="tituloT">' . $this->publicadas[$i]->getTitulo() . '</div></a></li>';
             echo $str;  
         }
     }
