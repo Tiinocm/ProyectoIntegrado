@@ -11,6 +11,7 @@ function main() {
     let text2 = document.getElementById("text2")
     let text3 = document.getElementById("text3")
     let text4 = document.getElementById("text4")
+    let img = document.getElementById("img")
 
     add.addEventListener("click", function(e){
         e.preventDefault();
@@ -29,7 +30,8 @@ function main() {
         formData.append("text1", text1.value);
         formData.append("text2", text2.value);
         formData.append("text3", text3.value);
-        formData.append("text4", text4.value);
+        formData.append("text4", text4.value);  
+        formData.append("img", img);
         const xhhtp = new XMLHttpRequest();
         xhhtp.addEventListener("readystatechange", function(){
             if (this.readyState == 4 && this.status == 200) {
