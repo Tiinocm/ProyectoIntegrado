@@ -41,9 +41,10 @@ class cronos extends connection {
             $i = 3;
         }else{
             $countFor = 3;
+            $i = 0;
         }
         $str = "";
-        for ($i=0; $i < $countFor; $i++) { 
+        for ($i; $i < $countFor; $i++) { 
             $num = ($i % 2 == 0) ? "par" : "impar";
             $str .= "<li class='noticia noti$i $num'>";
             $str .= "<a href='noticiaIndividual.php?id=". $this->publicadas[$i]->getId() . "'><div class='titulo'>" . $this->publicadas[$i]->getTitulo() . "</div></a>";
