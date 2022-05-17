@@ -37,15 +37,17 @@ class cronos extends connection {
         */
 
         try {
-            $plantilla = "SELECT plantilla from noticias WHERE id_noticias = $id";
+            $plantilla = "SELECT plantilla from noticias WHERE id_noticia = $id";
             $sqlPlantilla = $this->conn->query($plantilla);
             $sqlPlantilla = $sqlPlantilla->fetchAll(PDO::FETCH_ASSOC);
             $plantilla = $sqlPlantilla[0]["plantilla"];
+
             if ($plantilla == 0) {
                 $strPlantilla = "plantilla0.titulo1, plantilla0.parrafo1, plantilla0.img1, plantilla0.titulo2, plantilla0.parrafo2, plantilla0.img2";
             }else{
                 $strPlantilla = "plantilla1.titulo1, plantilla1.parrafo1, plantilla1.img1, plantilla1.parrafo2, plantilla1.img2";
             }
+
             $plantillaNum = "plantilla" . $plantilla;
             $sql = "SELECT fecha, 
             (SELECT comunidad.nombre from comunidad where comunidad.id_comunidad = noticias.id_comunidad) AS nombre_comunidad,
