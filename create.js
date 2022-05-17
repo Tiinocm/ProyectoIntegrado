@@ -7,6 +7,7 @@ function main() {
     let plantilla1 = document.getElementById("plantilla1")
     let add = document.getElementById("add");
     let form = document.getElementById("formulario")
+    let text1 = document.getElementById("text1")
 
     add.addEventListener("click", function(e){
         e.preventDefault();
@@ -22,6 +23,7 @@ function main() {
     form.addEventListener("submit", function(e) {
         e.preventDefault();
         let formData = new FormData(this);
+        formData.append("text1", text1.innerHTML);
         const xhhtp = new XMLHttpRequest();
         xhhtp.addEventListener("readystatechange", function(){
             if (this.readyState == 4 && this.status == 200) {
