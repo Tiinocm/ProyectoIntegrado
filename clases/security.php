@@ -1,5 +1,5 @@
 <?php
-
+/* hecho por tino */
 class security extends connection
 {
     private $loginPage = "login.php";
