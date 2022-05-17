@@ -1,6 +1,4 @@
 <?php
-
+require_once "autoloading.php";
 $cronos = new cronos;
 $cronos->insertNoticia();
-
-echo json_encode($_POST);
