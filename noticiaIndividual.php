@@ -49,7 +49,7 @@ $security->register();
         <section class="noticia">
             <div class="titulo"> Titulo de la noticia<br>
                 <cite class="autor">Escrito por <a href="#" class="users">user</a></cite>
-                <div class="dia"> 9 Mayo 2022</div>
+                <div class="dia" id="dia"> 9 Mayo 2022</div>
 
             </div>
 
