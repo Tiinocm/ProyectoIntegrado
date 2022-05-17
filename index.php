@@ -46,7 +46,7 @@ $loginMessage = $security->doLogin();
         </aside>
         <section class="destacadas">
             <!-- sección de las noticias mejor valoradas -->
-            <header>noticias mejor valoradas</header>
+            <header class="titulares">noticias mejor valoradas</header>
             <!-- lista de las noticias -->
             <ul class="mejorValoradas" id="mejorValoradas">
                 <!-- cada "li" es una noticia. Las noticias se generarán mediante PHP.-->
@@ -55,7 +55,7 @@ $loginMessage = $security->doLogin();
             </ul>
         </section>
         <section class="scroll">
-            <header>noticias scroll</header>
+            <header class="titulares">noticias scroll</header>
             <ul class="noticiasScroll">
 
                 <?php $cronos->drawNoticias("") ?>
