@@ -83,10 +83,10 @@ $security->checkLoggedIn();
                         <label for="titulo3">título de la sección 1: </label>
                         <input type="text" name="titulo3" id="titulo3"><br>
                         <textarea name="text3" id="text3" cols="45" rows="10"></textarea><br>
-                        <input type="file" name="img1" id="img1"><br>
+                        <input type="file" name="img3" id="img3"><br>
 
                         <textarea name="text4" id="text4" cols="45" rows="10"></textarea><br>
-                        <input type="file" name="img2" id="img2"><br>
+                        <input type="file" name="img4" id="img4"><br>
                     </section>
                 </div>
                 <button type="submit" class="submit">Enviar todo y terminar</button>
