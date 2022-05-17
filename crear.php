@@ -1,5 +1,4 @@
 <?php
 
-$prueba = ["img/" . $_POST["img"]["name"], 0];
 
-echo json_encode($prueba, true);
+echo json_encode("img/" . $_POST["img"]["name"]);
