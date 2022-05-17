@@ -140,6 +140,8 @@ class cronos extends connection {
             } catch (PDOException $e) {
                 echo 'Falló la consulta: ' . $e->getMessage();
             }
+        }else{
+            echo "los ficheros no se pudieron subir correctamente";
         }
 
         return $location;
