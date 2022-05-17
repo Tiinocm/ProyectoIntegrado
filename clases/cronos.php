@@ -29,7 +29,11 @@ class cronos extends connection {
     public function getNoticia($id)
     {
         /* 
-        SELECT noticias.id_noticia, noticias.usuario, noticias.fecha, noticias.titulo, noticias.imagen_portada, noticias.votos, comunidad.nombre, comunidad.id_comunidad, parrafos.posicion AS posicion_parrafos, parrafos.texto AS texto_parrafos, multimedia.posicion AS posicion_multimedia, multimedia.ruta AS ruta_multimedia FROM noticias INNER JOIN comunidad ON noticias.id_comunidad = comunidad.id_comunidad INNER JOIN parrafos ON parrafos.id_noticia = noticias.id_noticia INNER JOIN multimedia ON multimedia.id_noticia = noticias.id_noticia WHERE noticias.id_noticia = 1
+            SELECT fecha, 
+            (SELECT comunidad.nombre from comunidad where comunidad.id_comunidad = noticias.id_comunidad) AS nombre_comunidad,
+            usuario, votos, imagen_portada, titulo, plantilla
+            FROM `noticias` WHERE noticias.id_noticia = 8;
+            luego un if de plantilla para conceatenar el resto de la consulta
         */
     }
 
@@ -118,7 +122,7 @@ class cronos extends connection {
                 $titulo = $_POST["titulo"];
                 $imgPortada = $location;
                 $comunidad = $_POST["comunidades"];
-                $user = "";
+                $user = $_POST["user"];
                 $date = date("Y-m-d");
                 $plantilla = $_POST["plantilla"];
 

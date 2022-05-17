@@ -16,6 +16,7 @@ function main() {
     let img2 = document.getElementById("img2")
     let img3 = document.getElementById("img3")
     let img4 = document.getElementById("img4")
+    let user = document.getElementsByClassName("users")[0];
 
     add.addEventListener("click", function(e){
         e.preventDefault();
@@ -40,6 +41,7 @@ function main() {
         formData.append("text2", text2.value);
         formData.append("text3", text3.value);
         formData.append("text4", text4.value);  
+        formData.append("user", user.innerHTML);
 
         const xhhtp = new XMLHttpRequest();
         xhhtp.addEventListener("readystatechange", function(){
