@@ -41,7 +41,7 @@ function main() {
         formData.append("text2", text2.value);
         formData.append("text3", text3.value);
         formData.append("text4", text4.value);  
-        formData.append("user", user.innerHTML);
+        formData.append("user", user.value);
 
         const xhhtp = new XMLHttpRequest();
         xhhtp.addEventListener("readystatechange", function(){
