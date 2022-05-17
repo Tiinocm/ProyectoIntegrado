@@ -1,4 +1,6 @@
 <?php
 
+$cronos = new cronos;
+$cronos->insertNoticia();
 
-print_r(json_encode($_POST));
+echo json_encode($_POST);
