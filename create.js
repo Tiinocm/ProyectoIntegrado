@@ -43,14 +43,14 @@ function main() {
         formData.append("text4", text4.value);  
         formData.append("user", user.innerHTML);
 
-        const xhhtp = new XMLHttpRequest();
-        xhhtp.addEventListener("readystatechange", function(){
+        const xhttp = new XMLHttpRequest();
+        xhttp.addEventListener("readystatechange", function(){
             if (this.readyState == 4 && this.status == 200) {
 /*                 let data = JSON.parse(this.responseText);
                 console.log(data); */
             }
         });
-        xhhtp.open("POST", "crear.php", true);
-        xhhtp.send(formData);
+        xhttp.open("POST", "crear.php", true);
+        xhttp.send(formData);
     })
 }
