@@ -117,12 +117,12 @@ class cronos extends connection {
 
                 $titulo = $_POST["titulo"];
                 $imgPortada = $location;
-                $comunidad = "";
+                $comunidad = $_POST["comunidades"];
                 $user = "";
                 $date = date("Y-m-d");
                 $plantilla = $_POST["plantilla"];
 
-                $sqlNoticias = "INSERT INTO `noticias`(`id_noticia`, `id_comunidad`, `usuario`, `fecha`, `votos`, `imagen_portada`, `publicidad`, `titulo`, `plantilla`) VALUES ($maxId,1,'$user','$date',0,'$location',0,'$titulo','$plantilla')";
+                $sqlNoticias = "INSERT INTO `noticias`(`id_noticia`, `id_comunidad`, `usuario`, `fecha`, `votos`, `imagen_portada`, `publicidad`, `titulo`, `plantilla`) VALUES ($maxId,$comunidad,'$user','$date',0,'$location',0,'$titulo','$plantilla')";
                 $this->conn->exec($sqlNoticias);
                 $titulo1 = $_POST["titulo1"];
                 $titulo2 = $_POST["titulo2"];
@@ -167,7 +167,6 @@ class cronos extends connection {
 
     public function selectComunidad()
     {
-        /* <option value="0">League of legends</option> */
         try {
             $sql = "SELECT id_comunidad, nombre from comunidad";
             $comunidades = $this->conn->query($sql);
