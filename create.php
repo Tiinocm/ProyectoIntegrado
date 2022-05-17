@@ -56,6 +56,14 @@ $security->checkLoggedIn();
                     <cite class="autor">Escrito por <a href="#" class="users"><?= $security->getUserData() ?></a></cite>
                     <div class="dia"><?= date("j M Y") ?></div>
                 </div>
+
+                <div class="comunidades">
+                    <label for="comunidades">Selecciona la comunidad</label>
+                    <select name="comunidades" id="comunidades">
+                        <option value="0">Lol</option>
+                    </select>
+                </div>
+
                 <div class="selectorPlantilla">
                 <label for="plantilla">Plantilla a usar: </label>
                 <select name="plantilla" id="plantilla">

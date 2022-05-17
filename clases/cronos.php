@@ -107,7 +107,10 @@ class cronos extends connection {
         $temporal4 = $_FILES["img4"]["tmp_name"];
         
         if (move_uploaded_file($temporal, $location)) {
-            
+            move_uploaded_file($temporal1, $location1);
+            move_uploaded_file($temporal2, $location2);
+            move_uploaded_file($temporal3, $location3);
+            move_uploaded_file($temporal4, $location4);
             try {
                 $maxId = $this->getIdNoticia();
                 $maxId++;
@@ -130,11 +133,13 @@ class cronos extends connection {
                 $parrafo4 = $_POST["text4"];
 
                 if ($_POST["plantilla"] == 0) {
-                  $sql = "INSERT INTO `plantilla0`(`id_noticia`, `titulo1`, `parrafo1`, `img1`, `titulo2`, `parrafo2`, `img2`) VALUES ($maxId,'$titulo1','$parrafo1','$location1','$titulo2','$parrafo2','$location2')";  
-                  $this->conn->exec($sql);
+                    $sql = "INSERT INTO `plantilla0`(`id_noticia`, `titulo1`, `parrafo1`, `img1`, `titulo2`, `parrafo2`, `img2`) VALUES ($maxId,'$titulo1','$parrafo1','$location1','$titulo2','$parrafo2','$location2')";  
+                    $this->conn->exec($sql);
+                    /* llamar a mensaje de éxito */
                 }else{
                     $sql = "INSERT INTO `plantilla1`(`id_noticia`, `titulo1`, `parrafo1`, `img1`, `parrafo2`, `img2`) VALUES ($maxId,'$titulo3','$parrafo3','$location3','$parrafo4','$location4')";
                     $this->conn->exec($sql);
+                    /* llamar a mensaje de éxito */
                 }
                 
             } catch (PDOException $e) {
