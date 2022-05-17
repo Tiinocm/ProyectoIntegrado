@@ -58,9 +58,9 @@ $security->checkLoggedIn();
                 </div>
 
                 <div class="comunidades">
-                    <label for="comunidades">Selecciona la comunidad</label>
+                    <label for="comunidades">Selecciona la comunidad</label><br>
                     <select name="comunidades" id="comunidades">
-                        <option value="0">Lol</option>
+                        <option value="0">League of legends</option>
                     </select>
                 </div>
 
