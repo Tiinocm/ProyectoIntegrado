@@ -53,7 +53,7 @@ $cronos = new cronos;
                     <label for="img" class="obligatorio">imagen de portada: </label>
                     <input type="file" name="img" id="img" required>
                     <br>
-                    <cite class="autor">Escrito por <a href="#" class="users"><?= $security->getUserData() ?></a></cite>
+                    <cite class="autor">Escrito por <a href="#" class="users" id="user"><?= $security->getUserData() ?></a></cite>
                     <div class="dia"><?= date("j M Y") ?></div>
                 </div>
 

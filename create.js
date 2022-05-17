@@ -16,7 +16,7 @@ function main() {
     let img2 = document.getElementById("img2")
     let img3 = document.getElementById("img3")
     let img4 = document.getElementById("img4")
-    let user = document.getElementsByClassName("users")[0];
+    let user = document.getElementById("user");
 
     add.addEventListener("click", function(e){
         e.preventDefault();
@@ -46,8 +46,8 @@ function main() {
         const xhhtp = new XMLHttpRequest();
         xhhtp.addEventListener("readystatechange", function(){
             if (this.readyState == 4 && this.status == 200) {
-                let data = JSON.parse(this.responseText);
-                console.log(data);
+/*                 let data = JSON.parse(this.responseText);
+                console.log(data); */
             }
         });
         xhhtp.open("POST", "crear.php", true);
