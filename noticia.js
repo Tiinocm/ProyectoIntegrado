@@ -2,7 +2,7 @@ document.addEventListener("DOMContentLoaded", main)
 
 function main()
 {
-    console.log(window.location.search);
+    let get = window.location.search;
     const xhttp = new XMLHttpRequest();
     xhttp.addEventListener("readystatechange", function(){
         if (this.readyState == 4 && this.status == 200) {
@@ -10,6 +10,6 @@ function main()
             console.log(data);
         }
     });
-    xhttp.open("GET", "noticia.php", true);
+    xhttp.open("GET", "noticia.php" + get, true);
     xhttp.send();
 }
