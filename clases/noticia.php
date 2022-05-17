@@ -1,5 +1,5 @@
 <?php
-
+/* hecho por tino */
 class noticia
 {
     protected $id;

@@ -1,5 +1,5 @@
 <?php
-
+/* hecho por tino */
 class cronos extends connection {
     protected $publicadas = [];
     protected $noticia =  [];
@@ -91,9 +91,61 @@ class cronos extends connection {
     public function insertNoticia()
     {
         /* INSERT INTO `plantilla1`(`id_noticia`, `titulo1`, `parrafo1`, `img1`, `parrafo2`, `img2`) VALUES ('[value-1]','[value-2]','[value-3]','[value-4]','[value-5]','[value-6]') */
-        $location = "img/" . $_POST["img"]["name"];
+        $location = "img/" . $_FILES["img"]["name"];
+        $temporal = $_FILES["img"]["tmp_name"];
+
+        $location1 = "img/" . $_FILES["img1"]["name"];
+        $temporal1 = $_FILES["img1"]["tmp_name"];
+        
+        $location2 = "img/" . $_FILES["img2"]["name"];
+        $temporal2 = $_FILES["img2"]["tmp_name"];
+
+        $location = "img/" . $_FILES["img1"]["name"];
+        
+        if (move_uploaded_file($temporal, $location)) {
+            
+            try {
+                $maxId = $this->getIdNoticia();
+                $maxId++;
+
+                $titulo = $_POST["titulo"];
+                $imgPortada = $location;
+                $comunidad = "";
+                $user = "";
+                $date = date("Y-m-d");
+
+                $sqlNoticias = "INSERT INTO `noticias`(`id_noticia`, `id_comunidad`, `usuario`, `fecha`, `votos`, `imagen_portada`, `publicidad`, `titulo`, `plantilla`) VALUES ($maxId,1,'$user','$date',0,'$location',0,'$titulo','[value-9]')";
+
+                $titulo1 = $_POST["titulo1"];
+                $titulo2 = $_POST["titulo2"];
+                $parrafo1 = $_POST["text1"];
+                $parrafo2 = $_POST["text2"];
+                
+
+                if ($_POST["plantilla"] == 0) {
+                  $sql = "INSERT INTO `plantilla0`(`id_noticia`, `titulo1`, `parrafo1`, `img1`, `titulo2`, `parrafo2`, `img2`) VALUES ($maxId,'$titulo1','$parrafo1','$location1','$titulo2','$parrafo2','$location2')";  
+                }else{
+                    $sql = "INSERT INTO `plantilla1`(`id_noticia`, `titulo1`, `parrafo1`, `img1`, `parrafo2`, `img2`) VALUES ($maxId,'[value-2]','[value-3]','[value-4]','[value-5]','[value-6]')";
+                }
+                
+            } catch (\Throwable $th) {
+                
+            }
+        }
+
         return $location;
 
+    }
+
+    private function getIdNoticia()
+    {
+        try {
+            $sql = "SELECT id_noticia FROM noticias WHERE id_noticia = (SELECT max(id_noticia) FROM noticias)";
+            $maxNoticia = $this->conn->query($sql);
+            return $maxNoticia->fetchAll(PDO::FETCH_ASSOC);
+        } catch (\Throwable $th) {
+            //throw $th;
+        }
     }
 
     public function insertImagen()

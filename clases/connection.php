@@ -1,5 +1,5 @@
 <?php
-
+/* copiado y pegado de ejercicios anteriores (Tino) */
 class connection{
     protected $conn;
     public function __construct()

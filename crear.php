@@ -1,4 +1,4 @@
 <?php
 
 
-echo json_encode("img/" . $_POST["img"]["name"]);
+print_r(json_encode($_POST));
