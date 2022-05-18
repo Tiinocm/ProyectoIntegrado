@@ -1,9 +1,11 @@
 <?php
 require_once "autoloading.php";
-$cronos = new cronos;
-$cronos->getNoticias(1);
 $security = new security();
 $security->checkLoggedIn();
+$mod = ($security->isAdmin($security->getUserData())) ? $cronos->modOption() : "";
+$mostrar = ($security->isAdmin($security->getUserData()) && $_GET["pub"] == 0) ? 0 : 1;
+$cronos = new cronos;
+$cronos->getNoticias($mostrar);
 ?>
 
 <!DOCTYPE html>
@@ -37,6 +39,7 @@ $security->checkLoggedIn();
                     <li><a href="create.php">Crear mi propia noticia</a></li>
                     <li><a href="index.php">Noticias destacadas</a></li>
                     <li><a href="#">Noticias comunitarias</a></li>
+                    <?= $mod ?>
                 </ul>
             </div>
         </aside>
