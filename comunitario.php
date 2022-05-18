@@ -3,8 +3,8 @@ require_once "autoloading.php";
 $security = new security();
 $security->checkLoggedIn();
 $mod = ($security->isAdmin($security->getUserData())) ? $cronos->modOption() : "";
-$mostrar = ($security->isAdmin($security->getUserData()) && $_GET["pub"] == 0) ? 0 : 1;
-echo $mostrar;
+/* $mostrar = ($security->isAdmin($security->getUserData()) && $_GET["pub"] == 0) ? 0 : 1;
+echo $mostrar; */
 $cronos = new cronos;
 $cronos->getNoticias(1);
 ?>
