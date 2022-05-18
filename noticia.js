@@ -11,7 +11,7 @@ function main()
             console.log(document.getElementById("user").innerHTML);
             document.getElementById("dia").innerHTML = data[0]["fecha"];
             document.getElementById("titulo").innerHTML = data[0]["titulo"];
-            document.getElementById("user").innerHTML = "alfajor";
+            /* document.getElementById("user").innerHTML = "alfajor"; */
         }
     });
     xhttp.open("GET", "noticia.php" + get, true);
