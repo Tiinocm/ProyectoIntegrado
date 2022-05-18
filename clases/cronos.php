@@ -65,13 +65,6 @@ class cronos extends connection {
 /* hecho por tino */
     public function drawNoticias($lugar)
     {
-        /* muestra por pantalla las noticias de index.html (cabe destacar que al haber dos formato de noticias diferentes $lugar identifica el formato que se le da dependiendo de donde deberían de ir) */
-
-        /*  <li class='noticia noti0 par'>
-        <a href='noticiaIndividual.php?id=8'>
-        <div class='titulo'>Título de noticia de Prueba DAW1</div></a>
-        <div class='comunidad'>Videojuegos</div>
-        <div class='votos'><i class="fa-regular fa-heart"></i> <span id='countvotos'>123</span</div></li> */
         $countFor = count($this->publicadas);
         if ($lugar != "destacadas") {
             $i = 3;

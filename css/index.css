@@ -88,7 +88,7 @@
   .comunidad::before{
     content: '#';
   }
-  /* por ahora todos los elementos son "even" debido a los ::before, pero la idea es añadir los odd y even como clases directamente desde js */
+
   .par .titulo{
     float: left;
   }
@@ -233,6 +233,19 @@
 
     .tituloT{
       font-family: Lora,Georgia,Times,Times New Roman,serif;
+    }
+    .par .titulo{
+      float: left;
+    }
+    .par .comunidad{
+      float: right;
+    }
+  
+    .impar .titulo{
+      float: right;
+    }
+    .impar .comunidad{
+      float: left;
     }
 }
 /* eliminar bordes blancos al rededor del contenido */
