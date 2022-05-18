@@ -22,11 +22,11 @@ function main()
                 document.getElementById("img2").src = data[0]["img2"];
             }else{
                 document.getElementById("plantilla1").style.display = "block";
-                document.getElementById("titulo3").innerHTML = data[0]["titulo3"];
-                document.getElementById("parrafo3").innerHTML = data[0]["parrafo3"];
-                document.getElementById("parrafo4").innerHTML = data[0]["parrafo4"];
-                document.getElementById("img3").src = data[0]["img3"];
-                document.getElementById("img4").src = data[0]["img4"];
+                document.getElementById("titulo3").innerHTML = data[0]["titulo1"];
+                document.getElementById("parrafo3").innerHTML = data[0]["parrafo1"];
+                document.getElementById("parrafo4").innerHTML = data[0]["parrafo2"];
+                document.getElementById("img3").src = data[0]["img1"];
+                document.getElementById("img4").src = data[0]["img2"];
             }
 
         }
