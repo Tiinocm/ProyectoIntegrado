@@ -87,6 +87,16 @@
     width: 60%;
     outline: none;
   }
+
+  .selectorPlantilla, .comunidades{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: center;
+    font-family: Lora,Georgia,Times,Times New Roman,serif;
+  }
+  
 }
 
 @media (min-width:640px) {
