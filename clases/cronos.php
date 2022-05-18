@@ -100,7 +100,7 @@ class cronos extends connection {
         }
         */
         try {
-            $sql = "SELECT imagen_portada FROM noticia where id_noticia = $id";
+            $sql = "SELECT imagen_portada FROM noticias where id_noticia = $id";
             $sql = $this->conn->query($sql);
             $sql = $sql->fetchAll(PDO::FETCH_ASSOC);
         } catch (PDOException $e) {

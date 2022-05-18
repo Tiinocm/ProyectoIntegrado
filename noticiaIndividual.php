@@ -23,12 +23,12 @@ $cronos = new cronos;
     <title>TítuloNoticia</title>
     <script src="noticia.js"></script>
     <style>
-        
+        <?= $cronos->styleNoticia($_GET["id"]) ?>
     </style>
 </head>
 
 <body>
-<?= $cronos->styleNoticia($_GET["id"]) ?>
+
     <div class="grid">
         <header class="header">
             <img class="imgHeader" src="img/zeri.png" alt="">
