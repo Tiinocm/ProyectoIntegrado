@@ -24,6 +24,7 @@ $loginMessage = $security->doLogin();
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/f875adcb03.js" crossorigin="anonymous"></script>
+    <script src="likes.js"></script>
     <title>Cronos</title>
     <link rel="stylesheet" href="css/index.css">
     <style>
