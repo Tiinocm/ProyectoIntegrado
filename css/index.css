@@ -89,19 +89,29 @@
     content: '#';
   }
 
+  .par > *{
+    margin-left: auto;
+    margin-right: 0;
+  }
+  .impar > *{
+    margin-right: auto;
+    margin-left: 0;
+  }
+
   .par .titulo{
     float: left;
   }
-  .par .comunidad, .par .votos{
+ .par .votos{
     float: right;
   }
 
   .impar .titulo{
     float: right;
   }
-  .impar .comunidad, .impar .votos{
+ .impar .votos{
     float: left;
   }
+  
   .votos{
     position: relative;
     bottom: 30%;
