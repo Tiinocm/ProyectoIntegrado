@@ -231,7 +231,9 @@ html, body {
   margin: 0;
   padding: 0;
 }
-
+.votos{
+  float: right;
+}
 /* hamburguer
   https://codepen.io/yuhomyan/pen/ExKvNVa
 */
