@@ -6,6 +6,7 @@ $cronos->getNoticias(1);
 
 $security = new security();
 $loginMessage = $security->doLogin();
+$mod = ($security->isAdmin($security->getUserData())) ? $cronos->modOption() : "";
 ?>
 
 
@@ -46,6 +47,7 @@ $loginMessage = $security->doLogin();
                     <li><a href="create.php">Crear mi propia noticia</a></li>
                     <li><a href="#">Noticias destacadas</a></li>
                     <li><a href="comunitario.php">Noticias comunitarias</a></li>
+                    <?= $mod ?>
                 </ul>
             </div>
         </aside>

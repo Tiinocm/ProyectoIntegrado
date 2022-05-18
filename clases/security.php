@@ -42,6 +42,14 @@ class security extends connection
         }
     }
 
+    public function isAdmin($userName)
+    {
+        $data = $this->getUser($userName);
+
+        return ($data[0]["moderador"] == 1) ? true : false;
+    }
+
+
     private function checkUser($user, $userPassword)
     {
         if ($user) {    

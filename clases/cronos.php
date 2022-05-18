@@ -254,4 +254,9 @@ class cronos extends connection {
             //throw $th;
         }
     }
+
+    public function modOption()
+    {
+        return '<li><a href="comunitario.php?pub=0">Noticias no publicadas</a></li>';
+    }
 }
