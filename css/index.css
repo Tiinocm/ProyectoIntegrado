@@ -195,6 +195,7 @@
       color: white;
       width: fit-content;
       font-family: Lora,Georgia,Times,Times New Roman,serif;
+      white-space: nowrap;
     }
     .votos{
       position: relative;
