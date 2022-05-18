@@ -31,7 +31,7 @@ $cronos = new cronos;
 
     <div class="grid">
         <header class="header">
-            <img class="imgHeader" src="img/zeri.png" alt="">
+            <img class="imgHeader" id="imgHeader" src="img/zeri.png" alt="">
         </header>
         <aside class="ham">
             <input type="checkbox" id="active">
