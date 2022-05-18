@@ -233,29 +233,21 @@
       font-size: 1.2em;
     }
 
-    .noticia *{
-      width: 100%;
-    }
-
     .tituloT{
       font-family: Lora,Georgia,Times,Times New Roman,serif;
     }
     .par .titulo{
-      display: inline-block;
-      text-align: left;
+      float: left;
     }
     .par .comunidad, .par .votos{
-      display: inline-block;
-      text-align: right;
+      float: right;
     }
   
     .impar .titulo{
-      display: inline-block;
-      text-align: right;
+      float: right;
     }
     .impar .comunidad, .impar .votos{
-      display: inline-block;
-      text-align: left;
+      float: left;
     }
 }
 /* eliminar bordes blancos al rededor del contenido */
