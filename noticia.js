@@ -8,7 +8,7 @@ function main()
         if (this.readyState == 4 && this.status == 200) {
             let data = JSON.parse(this.responseText);
             console.log(data);
-            console.log(data[0]["usuario"]);
+            console.log(document.getElements("user"));
             document.getElementById("dia").innerHTML = data[0]["fecha"];
             document.getElementById("titulo").innerHTML = data[0]["titulo"];
             document.getElements("user").innerHTML = data[0]["usuario"];
