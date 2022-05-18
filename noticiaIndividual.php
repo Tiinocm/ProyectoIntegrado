@@ -3,6 +3,7 @@ require_once "autoloading.php";
 $security = new security();
 $security->register();
 
+$cronos = new cronos;
 
 ?>
 
@@ -22,16 +23,15 @@ $security->register();
     <title>TítuloNoticia</title>
     <script src="noticia.js"></script>
     <style>
-        header::before {
-            background-image: url(img/zeri.png);
-        }
+        <?= $cronos->styleNoticia($_GET["id"]) ?>
     </style>
 </head>
 
 <body>
+
     <div class="grid">
         <header class="header">
-            <img class="imgHeader" src="img/zeri.png" alt="">
+            <img class="imgHeader" id="imgHeader" src="" alt="">
         </header>
         <aside class="ham">
             <input type="checkbox" id="active">

@@ -91,6 +91,26 @@ class cronos extends connection {
         }
         echo $str;  
     }
+
+    public function styleNoticia($id)
+    {
+        /* 
+        header::before {
+            background-image: url(img/zeri.png);
+        }
+        */
+        try {
+            $sql = "SELECT imagen_portada FROM noticias where id_noticia = $id";
+            $sql = $this->conn->query($sql);
+            $sql = $sql->fetchAll(PDO::FETCH_ASSOC);
+        } catch (PDOException $e) {
+            echo 'Falló la consulta: ' . $e->getMessage();
+        }
+        $img = $sql[0]["imagen_portada"];
+        return "header::before {
+            background-image: url($img);
+        }";
+    }
 /* hecho por tino */
     public function drawComunitario()
     {

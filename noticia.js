@@ -9,6 +9,7 @@ function main()
             let data = JSON.parse(this.responseText);
             console.log(data);
             console.log(data[0]["usuario"]);
+            document.getElementById("imgHeader").src = data[0]["imagen_portada"].slice(1, data[0]["imagen_portada"].length -1);
             document.getElementById("dia").innerHTML = data[0]["fecha"];
             document.getElementById("titulo").innerHTML = data[0]["titulo"];
             document.getElementById("user").innerHTML = data[0]["usuario"];
@@ -28,7 +29,6 @@ function main()
                 document.getElementById("img3").src = data[0]["img1"];
                 document.getElementById("img4").src = data[0]["img2"];
             }
-
         }
     });
     xhttp.open("GET", "noticia.php" + get, true);
