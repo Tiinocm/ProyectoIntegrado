@@ -8,8 +8,10 @@ function main() {
         icon[i].addEventListener("click", function () {
             if (icon[i].classList.contains("fa-regular")) {
                 icon[i].classList.replace("fa-regular", "fa-solid");
+                sumar();
             } else {
                 icon[i].classList.replace("fa-solid", "fa-regular");
+                restar();
             }
         });
 
@@ -33,4 +35,14 @@ function main() {
    xhttp.send(); 
  
     }); */
+}
+
+function sumar() 
+{
+    
+}
+
+function restar() 
+{
+    
 }
