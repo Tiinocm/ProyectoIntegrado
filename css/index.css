@@ -83,36 +83,34 @@
     padding: 5px;
     color: white;
     width: fit-content;
-    white-space: nowrap;
   }
 
   .comunidad::before{
     content: '#';
   }
 
-  .par > *{
-    margin-left: auto;
-    margin-right: 0;
-  }
-  .impar > *{
-    margin-right: auto;
-    margin-left: 0;
-  }
+/*     .par > *{
+      margin-left: auto;
+      margin-right: 0;
+    }
+    .impar > *{
+      margin-right: auto;
+      margin-left: 0;
+    } */
 
-  .par .titulo{
-    float: left;
-  }
- .par .votos{
-    float: right;
-  }
-
-  .impar .titulo{
-    float: right;
-  }
- .impar .votos{
-    float: left;
-  }
-
+    .par .titulo{
+      float: left;
+    }
+   .par .comunidad{
+      float: right;
+    }
+  
+    .impar .titulo{
+      float: right;
+    }
+   .impar .comunidad{
+      float: left;
+    }
   .votos{
     display: none;
   }
