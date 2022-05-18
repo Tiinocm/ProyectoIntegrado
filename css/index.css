@@ -193,7 +193,7 @@
     .votos{
       position: relative;
       float: right;
-      bottom: 90%;
+      bottom: 10%;
       color: white;
       width: fit-content;
     }
