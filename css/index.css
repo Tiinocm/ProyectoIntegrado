@@ -238,14 +238,19 @@
       color: white;
       font-size: 1.2em;
     }
-
-    .noticia > *{
-      margin-left: auto;
-      margin-right: 0;
-    }
     .tituloT{
       font-family: Lora,Georgia,Times,Times New Roman,serif;
     }
+
+    .par > *{
+      margin-left: auto;
+      margin-right: 0;
+    }
+    .impar > *{
+      margin-right: auto;
+      margin-left: 0;
+    }
+
     .par .titulo{
       float: left;
     }
