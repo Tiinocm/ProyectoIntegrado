@@ -192,8 +192,8 @@
     }
     .votos{
       position: relative;
-      float: right;
-      bottom: 30%;
+      float: left;
+      bottom: 90%;
       color: white;
       width: fit-content;
       font-size: 1.5em;
