@@ -1,9 +1,9 @@
 <?php
-/* hecho por tino */
+
 class cronos extends connection {
     protected $publicadas = [];
     protected $noticia =  [];
-
+/* hecho por tino */
     public function getNoticias($publicado)
     {
         /* 
@@ -25,7 +25,7 @@ class cronos extends connection {
             echo 'Falló la consulta: ' . $e->getMessage();
         }
     }
-
+/* hecho por tino */
     public function getNoticia($id)
     {
         /* 
@@ -62,7 +62,7 @@ class cronos extends connection {
             echo 'Falló la consulta: ' . $e->getMessage();
         }
     }
-
+/* hecho por tino */
     public function drawNoticias($lugar)
     {
         /* muestra por pantalla las noticias de index.html (cabe destacar que al haber dos formato de noticias diferentes $lugar identifica el formato que se le da dependiendo de donde deberían de ir) */
@@ -85,7 +85,7 @@ class cronos extends connection {
         }
         echo $str;  
     }
-
+/* hecho por tino */
     public function drawComunitario()
     {
         /* muestra por pantalla las noticias de comunitario.php */
@@ -99,7 +99,7 @@ class cronos extends connection {
             echo $str;  
         }
     }
-
+/* hecho por tino */
     public function styleNoticias()
     {
         /* carga un css a la etiqueta <style> en el head de los html que necesitan un estilo para las noticias */
@@ -117,10 +117,9 @@ class cronos extends connection {
             echo $style;
         }
     }
-
+/* hecho por tino */
     public function insertNoticia()
     {
-        /* INSERT INTO `plantilla1`(`id_noticia`, `titulo1`, `parrafo1`, `img1`, `parrafo2`, `img2`) VALUES ('[value-1]','[value-2]','[value-3]','[value-4]','[value-5]','[value-6]') */
         $location = "img/" . $_FILES["img"]["name"];
         $temporal = $_FILES["img"]["tmp_name"];
 
@@ -165,11 +164,11 @@ class cronos extends connection {
                 if ($_POST["plantilla"] == 0) {
                     $sql = "INSERT INTO `plantilla0`(`id_noticia`, `titulo1`, `parrafo1`, `img1`, `titulo2`, `parrafo2`, `img2`) VALUES ($maxId,'$titulo1','$parrafo1','$location1','$titulo2','$parrafo2','$location2')";  
                     $this->conn->exec($sql);
-                    /* llamar a mensaje de éxito */
+                    /* redirigir */
                 }else{
                     $sql = "INSERT INTO `plantilla1`(`id_noticia`, `titulo1`, `parrafo1`, `img1`, `parrafo2`, `img2`) VALUES ($maxId,'$titulo3','$parrafo3','$location3','$parrafo4','$location4')";
                     $this->conn->exec($sql);
-                    /* llamar a mensaje de éxito */
+                    /* redirigir */
                 }
                 
             } catch (PDOException $e) {
@@ -182,7 +181,7 @@ class cronos extends connection {
         return $location;
 
     }
-
+/* hecho por tino */
     private function getIdNoticia()
     {
         try {
