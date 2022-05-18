@@ -1,7 +1,6 @@
 <?php
 require_once "autoloading.php";
 $security = new security();
-$security->checkLoggedIn();
 $cronos = new cronos;
 $mod = ($security->isAdmin($security->getUserData())) ? $cronos->modOption() : "";
 $mostrar = ($security->isAdmin($security->getUserData()) && isset($_GET["pub"])) ? 0 : 1;

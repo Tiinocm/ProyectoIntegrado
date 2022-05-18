@@ -5,7 +5,6 @@ $cronos = new cronos();
 $cronos->getNoticias(1);
 
 $security = new security();
-$loginMessage = $security->doLogin();
 $mod = ($security->isAdmin($security->getUserData())) ? $cronos->modOption() : "";
 ?>
 

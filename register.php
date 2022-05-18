@@ -2,7 +2,7 @@
 require_once "autoloading.php";
 $security = new security();
 $security->register();
-
+$cronos = new cronos;
 ?>
 
 <!DOCTYPE html>
@@ -32,6 +32,7 @@ $security->register();
                     <li><a href="create.php">Crear mi propia noticia</a></li>
                     <li><a href="index.php">Noticias destacadas</a></li>
                     <li><a href="comunitario.php">Noticias comunitarias</a></li>
+                    <?= $mod ?>
                 </ul>
             </div>
         </aside>

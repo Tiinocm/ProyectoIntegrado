@@ -4,7 +4,7 @@ $security = new security();
 $security->register();
 
 $cronos = new cronos;
-
+$mod = ($security->isAdmin($security->getUserData())) ? $cronos->modOption() : "";
 ?>
 
 
@@ -43,6 +43,7 @@ $cronos = new cronos;
                     <li><a href="create.php">Crear mi propia noticia</a></li>
                     <li><a href="index.php">Noticias destacadas</a></li>
                     <li><a href="comunitario.php">Noticias comunitarias</a></li>
+                    <?= $mod ?>
                 </ul>
             </div>
         </aside>
