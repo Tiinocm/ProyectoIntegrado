@@ -38,7 +38,7 @@ $cronos->getNoticias($mostrar);
                     <li><a href="login.php"><?= ($security->getUserData()) ? $security->getUserData() : "Iniciar Sesión" ?></a></li>
                     <li><a href="create.php">Crear mi propia noticia</a></li>
                     <li><a href="index.php">Noticias destacadas</a></li>
-                    <li><a href="#">Noticias comunitarias</a></li>
+                    <li><a href="comunitario.php">Noticias comunitarias</a></li>
                     <?= $mod ?>
                 </ul>
             </div>
