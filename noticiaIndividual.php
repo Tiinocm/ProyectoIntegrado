@@ -20,6 +20,7 @@ $security->register();
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300&family=Lora&display=swap" rel="stylesheet">
     <title>TítuloNoticia</title>
+    <script src="noticia.js"></script>
     <style>
         header::before {
             background-image: url(img/zeri.png);
@@ -47,7 +48,7 @@ $security->register();
         </aside>
         <section class="noticia">
             <div class="titulo" id="titulo"><br>
-                <cite class="autor">Escrito por <a href="#" class="users"><div id="user"></div></a></cite>
+                <cite class="autor">Escrito por <a href="#" class="users"><div id="usuario"></div></a></cite>
                 <div class="dia" id="dia"> 9 Mayo 2022</div>
 
             </div>
@@ -69,7 +70,6 @@ $security->register();
 
         </section>
     </div>
-    <script src="noticia.js"></script>
 </body>
 
 </html>
