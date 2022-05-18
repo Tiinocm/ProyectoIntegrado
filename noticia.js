@@ -15,6 +15,7 @@ function main()
             if (data[0]["plantilla"] == 0) {
                 document.getElementById("plantilla0").style.display = "block";
                 document.getElementById("titulo1").innerHTML = data[0]["titulo1"];
+                document.getElementById("titulo2").innerHTML = data[0]["titulo2"];
                 document.getElementById("parrafo1").innerHTML = data[0]["parrafo1"];
                 document.getElementById("parrafo2").innerHTML = data[0]["parrafo2"];
                 document.getElementById("img1").src = data[0]["img1"];
