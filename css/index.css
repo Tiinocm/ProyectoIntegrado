@@ -217,7 +217,9 @@
     .scroll .titulo{
       display: none;
     }
-
+    .titulo{
+      width: 100%;
+    }
     .noticiasScroll{
       /* Noticias que están debajo de las destacadas */
       display: grid;
