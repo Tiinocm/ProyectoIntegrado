@@ -9,7 +9,7 @@ function main()
             let data = JSON.parse(this.responseText);
             console.log(data);
             console.log(data[0]["usuario"]);
-            document.getElementById("imgHeader").src = data[0]["imagen_portada"];
+            document.getElementById("imgHeader").src = data[0]["imagen_portada"].slice(2, data[0]["imagen_portada"].length -2);
             document.getElementById("dia").innerHTML = data[0]["fecha"];
             document.getElementById("titulo").innerHTML = data[0]["titulo"];
             document.getElementById("user").innerHTML = data[0]["usuario"];
