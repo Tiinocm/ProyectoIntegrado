@@ -233,6 +233,10 @@
       font-size: 1.2em;
     }
 
+    .noticia *{
+      width: 100%;
+    }
+
     .tituloT{
       font-family: Lora,Georgia,Times,Times New Roman,serif;
     }
