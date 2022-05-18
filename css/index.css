@@ -34,6 +34,7 @@
   .titulares{
     font-family: 'Bebas Neue', cursive;
     font-size: 32px;
+    height: fit-content;
   }
 
   .ham{
