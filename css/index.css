@@ -92,17 +92,23 @@
   .par .titulo{
     float: left;
   }
-  .par .comunidad{
+  .par .comunidad, .par .votos{
     float: right;
   }
 
   .impar .titulo{
     float: right;
   }
-  .impar .comunidad{
+  .impar .comunidad, .impar .votos{
     float: left;
   }
-
+  .votos{
+    position: relative;
+    bottom: 30%;
+    color: white;
+    width: fit-content;
+    font-size: 1.5em;
+  }
 }
 @media (min-width:640px) {
 
