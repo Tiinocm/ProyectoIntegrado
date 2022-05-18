@@ -239,20 +239,23 @@
       font-size: 1.2em;
     }
 
+    .noticia{
+      text-align: right;
+    }
     .tituloT{
       font-family: Lora,Georgia,Times,Times New Roman,serif;
     }
     .par .titulo{
       float: left;
     }
-    .par .comunidad, .par .votos{
+   .par .votos{
       float: right;
     }
   
     .impar .titulo{
       float: right;
     }
-    .impar .comunidad, .impar .votos{
+   .impar .votos{
       float: left;
     }
 }
