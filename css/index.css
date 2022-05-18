@@ -114,11 +114,7 @@
   }
 
   .votos{
-    position: relative;
-    bottom: 30%;
-    color: white;
-    width: fit-content;
-    font-size: 1.5em;
+    display: none;
   }
 }
 @media (min-width:640px) {
