@@ -237,17 +237,21 @@
       font-family: Lora,Georgia,Times,Times New Roman,serif;
     }
     .par .titulo{
-      float: left;
+      display: inline-block;
+      text-align: left;
     }
     .par .comunidad, .par .votos{
-      float: right;
+      display: inline-block;
+      text-align: right;
     }
   
     .impar .titulo{
-      float: right;
+      display: inline-block;
+      text-align: right;
     }
     .impar .comunidad, .impar .votos{
-      float: left;
+      display: inline-block;
+      text-align: left;
     }
 }
 /* eliminar bordes blancos al rededor del contenido */
