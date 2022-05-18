@@ -184,7 +184,6 @@
       /* Apartado que nombra donde pertenece cada noticia */
       background-color: rgb(255, 122, 123, 0.8);
       position: relative;
-      float: right;
       bottom: 90%;
       padding: 5px;
       color: white;
@@ -193,11 +192,14 @@
     }
     .votos{
       position: relative;
-      float: right;
       bottom: 30%;
       color: white;
       width: fit-content;
       font-size: 1.5em;
+    }
+
+    .votos i{
+      color: red;
     }
 
     .comunidad::before{
@@ -237,14 +239,14 @@
     .par .titulo{
       float: left;
     }
-    .par .comunidad{
+    .par .comunidad, .par .votos{
       float: right;
     }
   
     .impar .titulo{
       float: right;
     }
-    .impar .comunidad{
+    .impar .comunidad, .impar .votos{
       float: left;
     }
 }
