@@ -217,9 +217,7 @@
     .scroll .titulo{
       display: none;
     }
-    .titulo{
-      width: 100%;
-    }
+
     .noticiasScroll{
       /* Noticias que están debajo de las destacadas */
       display: grid;
@@ -244,17 +242,17 @@
     .tituloT{
       font-family: Lora,Georgia,Times,Times New Roman,serif;
     }
-    .par .titulo a, .impar .votos{
-      text-align: left;
+    .par .titulo{
+      float: left;
     }
-    .par .comunidad{
+    .par .comunidad, .par .votos{
       float: right;
     }
   
-    .impar .titulo a, .par .votos{
-      text-align: right;
+    .impar .titulo{
+      float: right;
     }
-    .impar .comunidad{
+    .impar .comunidad, .impar .votos{
       float: left;
     }
 }
