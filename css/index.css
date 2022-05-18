@@ -239,8 +239,9 @@
       font-size: 1.2em;
     }
 
-    .noticia{
-      text-align: right;
+    .noticia > *{
+      margin-left: auto;
+      margin-right: 0;
     }
     .tituloT{
       font-family: Lora,Georgia,Times,Times New Roman,serif;
