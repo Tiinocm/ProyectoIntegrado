@@ -244,14 +244,14 @@
     .tituloT{
       font-family: Lora,Georgia,Times,Times New Roman,serif;
     }
-    .par .titulo, .impar .votos{
+    .par .titulo a, .impar .votos{
       text-align: left;
     }
     .par .comunidad{
       float: right;
     }
   
-    .impar .titulo, .par .votos{
+    .impar .titulo a, .par .votos{
       text-align: right;
     }
     .impar .comunidad{
