@@ -315,4 +315,8 @@ html, body {
     transition-delay: .6s;
     transform: translateX(-100px);
   }
+
+  .plantilla0, .plantilla1{
+    display: none;
+  }
   

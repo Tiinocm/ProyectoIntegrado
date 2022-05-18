@@ -52,18 +52,22 @@ $security->register();
                 <div class="dia" id="dia"> 9 Mayo 2022</div>
 
             </div>
+            <div class="plantilla0" id="plantilla0">
+                <h1 class="titulo1" id="titulo1"></h1>
+                <p class="parrafo" id="parrafo1"></p>
+                <img src="" alt="" class="imagen" id="img1">
+                <h1 class="titulo1" id="titulo2"></h1>
+                <p class="parrafo" id="parrafo2"></p>
+                <img src="" alt="" class="imagen" id="img2">
+            </div>
+            <div class="plantilla1" id="plantilla1">
+            <h1 class="titulo1" id="titulo3"></h1>
+                <p class="parrafo" id="parrafo3"></p>
+                <img src="" alt="" class="imagen" id="img3">
+                <p class="parrafo" id="parrafo4"></p>
+                <img src="" alt="" class="imagen" id="img4">
+            </div>
 
-            <p class="parrafo">
-                Lorem fistrum ese que llega no te digo trigo por no llamarte Rodrigor llevame al sircoo se calle ustée.
-                Amatomaa jarl va usté muy cargadoo qué dise usteer a gramenawer no te digo trigo por no llamarte
-                Rodrigor.
-            </p>
-            <img class="imagen" src="img/Viego.jpg" alt="imagen de prueba. Splash-Art de viego">
-            <p class="parrafo">
-                Va usté muy cargadoo al ataquerl diodeno no puedor a wan no te digo trigo por no llamarte Rodrigor te
-                voy a borrar el cerito la caidita caballo blanco caballo negroorl de la pradera a peich. Pecador torpedo
-                sexuarl te voy a borrar el cerito.
-            </p>
         </section>
     </div>
 </body>
