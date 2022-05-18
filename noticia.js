@@ -11,7 +11,7 @@ function main()
             console.log(data[0]["usuario"]);
             document.getElementById("dia").innerHTML = data[0]["fecha"];
             document.getElementById("titulo").innerHTML = data[0]["titulo"];
-            document.getElementById("user").value = data[0]["usuario"];
+            document.getElementById("user").innerHTML = data[0]["usuario"];
             if (data[0]["plantilla"] == 0) {
                 document.getElementById("plantilla0").style.display = "block";
                 document.getElementById("titulo1").innerHTML = data[0]["titulo1"];
