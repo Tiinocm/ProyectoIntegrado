@@ -193,9 +193,10 @@
     .votos{
       position: relative;
       float: right;
-      bottom: 10%;
+      bottom: 30%;
       color: white;
       width: fit-content;
+      font-size: 1.5em;
     }
 
     .comunidad::before{
