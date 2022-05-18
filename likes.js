@@ -6,10 +6,10 @@ function main() {
     let icon = document.getElementsByClassName("icon");
     for (let i = 0; i < icon.length; i++) {
         icon[i].addEventListener("click", function () {
-            if (icon.classList.contains("fa-regular")) {
-                icon.classList.replace("fa-regular", "fa-solid");
+            if (icon[i].classList.contains("fa-regular")) {
+                icon[i].classList.replace("fa-regular", "fa-solid");
             } else {
-                icon.classList.replace("fa-solid", "fa-regular");
+                icon[i].classList.replace("fa-solid", "fa-regular");
             }
         });
 
