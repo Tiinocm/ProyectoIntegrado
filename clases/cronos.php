@@ -83,7 +83,7 @@ class cronos extends connection {
         for ($i; $i < $countFor; $i++) { 
             $num = ($i % 2 == 0) ? "par" : "impar";
             $str .= "<li class='noticia noti$i $num'>";
-            $str .= "<div class='titulo'><a href='noticiaIndividual.php?id=". $this->publicadas[$i]->getId() . "'>" . $this->publicadas[$i]->getTitulo() . "</a></div>" .  '<div class="votos"><i class="icon fa-regular fa-heart id=' . $this->publicadas[$i]->getId() . '"></i> <span id="countvotos">123</span></div>';
+            $str .= "<div class='titulo'><a href='noticiaIndividual.php?id=". $this->publicadas[$i]->getId() . "'>" . $this->publicadas[$i]->getTitulo() . "</a></div>" .  '<div class="votos"><i class="icon fa-regular fa-heart id=' . $this->publicadas[$i]->getId() . '"></i> <span id="countvotos">' . $this->publicadas[$i]->getVotos() . '</span></div>';
             $str .= "<div class='comunidad'>" . $this->publicadas[$i]->getNombreComunidad() . "</div></li>";
             if ($lugar != "destacadas") {
                 $str .= '<li class="textNoticia"><a href="noticiaIndividual.php?id=' . $this->publicadas[$i]->getId() . '"><div class="tituloT">' . $this->publicadas[$i]->getTitulo() . '</div></a></li>';
