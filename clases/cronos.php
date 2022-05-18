@@ -65,6 +65,13 @@ class cronos extends connection {
 /* hecho por tino */
     public function drawNoticias($lugar)
     {
+
+        /* 
+            <li class='noticia noti$i $num'>
+            <div class='titulo'> <a href='noticiaIndividual.php?id=8'> Título </a></div> 
+            <div class="votos"> <i class="icon fa-regular fa-heart id=8"></i> <span id="countvotos">123</span> </div>
+            <div class='comunidad'> comunidad</div> </li>
+        */
         $countFor = count($this->publicadas);
         if ($lugar != "destacadas") {
             $i = 3;
@@ -76,7 +83,7 @@ class cronos extends connection {
         for ($i; $i < $countFor; $i++) { 
             $num = ($i % 2 == 0) ? "par" : "impar";
             $str .= "<li class='noticia noti$i $num'>";
-            $str .= "<a href='noticiaIndividual.php?id=". $this->publicadas[$i]->getId() . "'><div class='titulo'>" . $this->publicadas[$i]->getTitulo() . "</div></a>" . '<div class="votos"><i class="icon fa-regular fa-heart id=' . $this->publicadas[$i]->getId() . '"></i> <span id="countvotos">123</span></div>';
+            $str .= "<div class='titulo'><a href='noticiaIndividual.php?id=". $this->publicadas[$i]->getId() . "'>" . $this->publicadas[$i]->getTitulo() . "</a></div>" . '<div class="votos"><i class="icon fa-regular fa-heart id=' . $this->publicadas[$i]->getId() . '"></i> <span id="countvotos">123</span></div>';
             $str .= "<div class='comunidad'>" . $this->publicadas[$i]->getNombreComunidad() . "</div></li>";
             if ($lugar != "destacadas") {
                 $str .= '<li class="textNoticia"><a href="noticiaIndividual.php?id=' . $this->publicadas[$i]->getId() . '"><div class="tituloT">' . $this->publicadas[$i]->getTitulo() . '</div></a></li>';

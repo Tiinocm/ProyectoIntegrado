@@ -242,17 +242,17 @@
     .tituloT{
       font-family: Lora,Georgia,Times,Times New Roman,serif;
     }
-    .par .titulo{
-      float: left;
+    .par .titulo, .impar .votos{
+      text-align: left;
     }
-    .par .comunidad, .par .votos{
+    .par .comunidad{
       float: right;
     }
   
-    .impar .titulo{
-      float: right;
+    .impar .titulo, .par .votos{
+      text-align: right;
     }
-    .impar .comunidad, .impar .votos{
+    .impar .comunidad{
       float: left;
     }
 }
