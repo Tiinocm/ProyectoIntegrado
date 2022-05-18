@@ -190,7 +190,14 @@
       width: fit-content;
       font-family: Lora,Georgia,Times,Times New Roman,serif;
     }
-  
+    .votos{
+      position: relative;
+      float: right;
+      bottom: 90%;
+      color: white;
+      width: fit-content;
+    }
+
     .comunidad::before{
       content: '#';
     }
@@ -231,7 +238,6 @@ html, body {
   margin: 0;
   padding: 0;
 }
-
 /* hamburguer
   https://codepen.io/yuhomyan/pen/ExKvNVa
 */

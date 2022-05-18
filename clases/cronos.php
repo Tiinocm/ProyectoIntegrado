@@ -66,6 +66,12 @@ class cronos extends connection {
     public function drawNoticias($lugar)
     {
         /* muestra por pantalla las noticias de index.html (cabe destacar que al haber dos formato de noticias diferentes $lugar identifica el formato que se le da dependiendo de donde deberían de ir) */
+
+        /*  <li class='noticia noti0 par'>
+        <a href='noticiaIndividual.php?id=8'>
+        <div class='titulo'>Título de noticia de Prueba DAW1</div></a>
+        <div class='comunidad'>Videojuegos</div>
+        <div class='votos'><i class="fa-regular fa-heart"></i> <span id='countvotos'>123</span</div></li> */
         $countFor = count($this->publicadas);
         if ($lugar != "destacadas") {
             $i = 3;
@@ -77,7 +83,7 @@ class cronos extends connection {
         for ($i; $i < $countFor; $i++) { 
             $num = ($i % 2 == 0) ? "par" : "impar";
             $str .= "<li class='noticia noti$i $num'>";
-            $str .= "<a href='noticiaIndividual.php?id=". $this->publicadas[$i]->getId() . "'><div class='titulo'>" . $this->publicadas[$i]->getTitulo() . "</div></a>";
+            $str .= "<a href='noticiaIndividual.php?id=". $this->publicadas[$i]->getId() . "'><div class='titulo'>" . $this->publicadas[$i]->getTitulo() . "</div></a>" . '<div class="votos" id="icon"><i class="fa-regular fa-heart"></i> <span id="countvotos">123</span</div>';
             $str .= "<div class='comunidad'>" . $this->publicadas[$i]->getNombreComunidad() . "</div></li>";
             if ($lugar != "destacadas") {
                 $str .= '<li class="textNoticia"><a href="noticiaIndividual.php?id=' . $this->publicadas[$i]->getId() . '"><div class="tituloT">' . $this->publicadas[$i]->getTitulo() . '</div></a></li>';
