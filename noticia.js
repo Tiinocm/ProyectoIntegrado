@@ -28,7 +28,6 @@ function main()
                 document.getElementById("img3").src = data[0]["img1"];
                 document.getElementById("img4").src = data[0]["img2"];
             }
-
         }
     });
     xhttp.open("GET", "noticia.php" + get, true);
