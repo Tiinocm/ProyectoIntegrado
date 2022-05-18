@@ -7,10 +7,9 @@ $security = new security();
 $security->checkLoggedIn();
 $cronos = new cronos;
 $mod = ($security->isAdmin($security->getUserData())) ? $cronos->modOption() : "";
- $mostrar = ($security->isAdmin($security->getUserData()) && $_GET["pub"] == 0) ? 0 : 1;
-echo $mostrar;
+$mostrar = ($security->isAdmin($security->getUserData()) && isset($_GET["pub"])) ? 0 : 1;
 $cronos = new cronos;
-$cronos->getNoticias(1);
+$cronos->getNoticias($mostrar);
 ?>
 
 <!DOCTYPE html>
