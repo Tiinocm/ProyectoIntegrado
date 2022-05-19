@@ -245,7 +245,7 @@ class cronos extends connection {
             $cantVotos = $this->conn->query($cantVotos);
             $cantVotos = $cantVotos->fetchAll(PDO::FETCH_ASSOC);
             $cantVotos = $cantVotos[0]["votos"];
-            /* meter un if si es más o menos */
+            echo  $cantVotos;
             if ($operacion) {
                 $cantVotos++;
             }else{
