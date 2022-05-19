@@ -90,23 +90,23 @@
     outline: none;
   }
 
-  /* .selectorPlantilla, .comunidades{
+  .selectorPlantilla, .comunidades{
     width: 100%;
     display: flex;
     align-items: center;
     flex-direction: row;
     justify-content: center;
     font-family: Lora,Georgia,Times,Times New Roman,serif;
-  } */
+  }
 
-  .comunidades{
+  /* .comunidades{
     display: flex;
     align-content: center;
     justify-content: center;
     align-items: center;
     height: 15%;
     width: 100%;
-  }
+  } */
 
 }
 
