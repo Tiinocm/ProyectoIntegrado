@@ -26,7 +26,7 @@ function main() {
 
 }
 
-function sumar() {
+function sumar(id) {
     let url = "id=" + id + "&op=true";
 
     const xhttp = new XMLHttpRequest();
@@ -40,7 +40,7 @@ function sumar() {
     xhttp.send();
 }
 
-function restar() {
+function restar(id) {
     let url = "id=" + id + "&op=false";
 
     const xhttp = new XMLHttpRequest();
