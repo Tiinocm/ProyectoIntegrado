@@ -255,7 +255,7 @@ class cronos extends connection {
 
             $sqlUpdate = "UPDATE `noticias` SET `votos`=$cantVotos, WHERE id_noticia = $id";
             $sqlUpdate = $this->conn->query($sqlUpdate);
-            echo $cantVotos;
+            echo "cantVotos: " . $cantVotos;
             return $cantVotos;
         } catch (\Throwable $th) {
             //throw $th;
