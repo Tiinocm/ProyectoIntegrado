@@ -237,7 +237,7 @@ class cronos extends connection {
         }
 
     }
-
+    /* Alejandro */
     public function updateVotos($id,$operacion)
     {
         try {
@@ -250,7 +250,7 @@ class cronos extends connection {
             $cantVotos = $cantVotos->fetchAll(PDO::FETCH_ASSOC);
             $cantVotos = $cantVotos[0]["votos"];
 
-            if ($operacion) {
+            if ($operacion == "true") {
                 $cantVotos += 1;
             }else{
                 $cantVotos -= 1;
