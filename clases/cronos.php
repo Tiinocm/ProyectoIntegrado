@@ -26,6 +26,7 @@ class cronos extends connection
             echo 'Falló la consulta: ' . $e->getMessage();
         }
     }
+    
     /* hecho por tino */
     public function getNoticia($id)
     {
@@ -63,6 +64,7 @@ class cronos extends connection
             echo 'Falló la consulta: ' . $e->getMessage();
         }
     }
+
     /* hecho por tino */
     public function drawNoticias($lugar)
     {
@@ -93,6 +95,7 @@ class cronos extends connection
         echo $str;
     }
 
+
     public function styleNoticia($id)
     {
         /* 
@@ -112,6 +115,7 @@ class cronos extends connection
             background-image: url($img);
         }";
     }
+
     /* hecho por tino */
     public function drawComunitario()
     {
@@ -122,10 +126,11 @@ class cronos extends connection
             $str .= "<a href='noticiaIndividual.php?id=" . $this->publicadas[$i]->getId() . "'><div class='titulo'>" . $this->publicadas[$i]->getTitulo() . "</div></a>" .  '<div class="votos"><i class="icon fa-regular fa-heart id=' . $this->publicadas[$i]->getId() . '"></i> <span class="countvotos">' . $this->publicadas[$i]->getVotos() . '</span></div>'  ;
             $str .= "<div class='comunidad'>" . $this->publicadas[$i]->getNombreComunidad() . "</div>
             </li>";
-            $str .= '<li class="textNoticia"><a href="noticiaIndividual.php?id=' . $this->publicadas[$i]->getId() . '"<div class="tituloT">' . $this->publicadas[$i]->getTitulo() . '</div></a></li>';
+            $str .= '<li class="textNoticia"><a href="noticiaIndividual.php?id=' . $this->publicadas[$i]->getId() . '"<div class="tituloT">' . $this->publicadas[$i]->getTitulo() . '</div></a> <br> <a class="publicar" href="publicar.php?id=' . $this->publicadas[$i]->getId() . '">Publicar noticia</a> </li>';
             echo $str;
         }
     }
+
     /* hecho por tino */
     public function styleNoticias()
     {
@@ -144,6 +149,7 @@ class cronos extends connection
             echo $style;
         }
     }
+
     /* hecho por tino */
     public function insertNoticia()
     {
@@ -206,6 +212,7 @@ class cronos extends connection
 
         return $location;
     }
+
     /* hecho por tino */
     private function getIdNoticia()
     {
@@ -219,6 +226,7 @@ class cronos extends connection
         }
     }
 
+    /* Tino */
     public function selectComunidad()
     {
         try {
@@ -234,6 +242,7 @@ class cronos extends connection
             echo 'Falló la consulta: ' . $e->getMessage();
         }
     }
+
     /* Alejandro */
     public function updateVotos($id, $operacion)
     {
@@ -258,6 +267,7 @@ class cronos extends connection
         }
     }
 
+    /* Tino */
     public function modOption()
     {
         return '<li><a href="comunitario.php?pub=0">Noticias no publicadas</a></li>';
