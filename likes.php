@@ -6,4 +6,4 @@ $id = $_GET["id"];
 $operacion = $_GET["op"];
 $data = $cronos->updateVotos($id,$operacion);
 
-echo json_encode($data, true);
+echo json_encode($data);
