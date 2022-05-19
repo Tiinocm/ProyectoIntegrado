@@ -238,7 +238,7 @@ class cronos extends connection {
 
     }
 
-    public function updateVotos($id)
+    public function updateVotos($id,$operacion)
     {
         try {
             $cantVotos = "SELECT votos from noticias WHERE id_noticia = $id";
@@ -246,10 +246,19 @@ class cronos extends connection {
             $cantVotos = $cantVotos->fetchAll(PDO::FETCH_ASSOC);
             $cantVotos = $cantVotos[0]["votos"];
             /* meter un if si es más o menos */
-            $cantVotos++;
+            if ($operacion) {
+                $cantVotos++;
+            }else{
+                $cantVotos--;
+            }
+            
 
             $sqlUpdate = "UPDATE `noticias` SET `votos`=$cantVotos, WHERE id_noticia = $id";
             $sqlUpdate = $this->conn->query($sqlUpdate);
+            $cantVotos2 = "SELECT votos from noticias WHERE id_noticia = $id";
+            $cantVotos2 = $this->conn->query($cantVotos);
+            $cantVotos2 = $cantVotos2->fetchAll(PDO::FETCH_ASSOC);
+            return $cantVotos2[0]["votos"];
         } catch (\Throwable $th) {
             //throw $th;
         }

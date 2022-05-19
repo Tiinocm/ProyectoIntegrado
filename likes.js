@@ -5,44 +5,51 @@ document.addEventListener("DOMContentLoaded", main)
 function main() {
     let icon = document.getElementsByClassName("icon");
     for (let i = 0; i < icon.length; i++) {
+        let id = icon[i].classList.toString();
+        id = id[id.length - 1];
+
         icon[i].addEventListener("click", function () {
             if (icon[i].classList.contains("fa-regular")) {
                 icon[i].classList.replace("fa-regular", "fa-solid");
-                sumar();
+                sumar(id);
             } else {
                 icon[i].classList.replace("fa-solid", "fa-regular");
-                restar();
+                restar(id);
             }
         });
+
 
     }
 
 
-    /*     const xhttp = new XMLHttpRequest();
-   xhttp.addEventListener("readystatechange", function(){
-       if (this.readyState == 4 && this.status == 200) {
-           let data = JSON.parse(this.responseText);
-           console.log(data);
-           if(icon.classList.contains("fa-regular")){
-               icon.classList.replace("fa-regular","fa-solid");
-              }else{
-                  icon.classList.replace("fa-solid","fa-regular");
-              }
 
-       }
-   });
-   xhttp.open("GET", "likes.php?id", true);
-   xhttp.send(); 
- 
-    }); */
+
 }
 
-function sumar() 
-{
-    
+function sumar() {
+    let url = "id=" + id + "&op=true";
+
+    const xhttp = new XMLHttpRequest();
+    xhttp.addEventListener("readystatechange", function () {
+        if (this.readyState == 4 && this.status == 200) {
+            let data = JSON.parse(this.responseText);
+            document.getElementById("countvotos").innerHTML = data[0]["votos"];
+        }
+    })
+    xhttp.open("GET", "likes.php?" + url, true);
+    xhttp.send();
 }
 
-function restar() 
-{
-    
+function restar() {
+    let url = "id=" + id + "&op=false";
+
+    const xhttp = new XMLHttpRequest();
+    xhttp.addEventListener("readystatechange", function () {
+        if (this.readyState == 4 && this.status == 200) {
+            let data = JSON.parse(this.responseText);
+            document.getElementById("countvotos").innerHTML = data[0]["votos"];
+        }
+    })
+    xhttp.open("GET", "likes.php?" + url, true);
+    xhttp.send();
 }
