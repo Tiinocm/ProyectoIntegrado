@@ -93,7 +93,7 @@ class security extends connection
 
             }else{
                 $str = "las contraseñas no coinciden";
-                return  $str;
+                echo $str;
             }
 
         }
