@@ -7,7 +7,7 @@ function main() {
     for (let i = 0; i < icon.length; i++) {
         let id = icon[i].classList.toString();
         id = id[id.length - 1];
-
+        console.log(id);
         icon[i].addEventListener("click", function () {
             if (icon[i].classList.contains("fa-regular")) {
                 icon[i].classList.replace("fa-regular", "fa-solid");
