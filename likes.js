@@ -33,6 +33,7 @@ function sumar(id) {
     xhttp.addEventListener("readystatechange", function () {
         if (this.readyState == 4 && this.status == 200) {
             let data = JSON.parse(this.responseText);
+            console.log(data);
             document.getElementById("countvotos").innerHTML = data[0]["votos"];
         }
     })
@@ -47,6 +48,7 @@ function restar(id) {
     xhttp.addEventListener("readystatechange", function () {
         if (this.readyState == 4 && this.status == 200) {
             let data = JSON.parse(this.responseText);
+            console.log(data);
             document.getElementById("countvotos").innerHTML = data[0]["votos"];
         }
     })
