@@ -41,6 +41,30 @@
         font-weight: bold;
         font-family: Lora,Georgia,Times,Times New Roman,serif;
       }
+      .comunidad{
+        background-color: rgb(255, 122, 123, 0.8);
+        position: relative;
+        bottom: 90%;
+        padding: 5px;
+        color: white;
+        width: fit-content;
+      }
+      .par .titulo{
+        float: left;
+      }
+     .par .comunidad{
+        float: right;
+      }
+    
+      .impar .titulo{
+        float: right;
+      }
+     .impar .comunidad{
+        float: left;
+      }
+    .votos{
+      display: none;
+    }
 }
 
 @media (min-width:640px) {
