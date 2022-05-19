@@ -237,28 +237,31 @@ class cronos extends connection {
         }
 
     }
-
+    /* Alejandro */
     public function updateVotos($id,$operacion)
     {
         try {
+            ini_set('display_errors', 1);
+            ini_set('display_startup_errors', 1);
+            error_reporting(E_ALL);
+            /* mostrar errores */
             $cantVotos = "SELECT votos from noticias WHERE id_noticia = $id";
             $cantVotos = $this->conn->query($cantVotos);
             $cantVotos = $cantVotos->fetchAll(PDO::FETCH_ASSOC);
             $cantVotos = $cantVotos[0]["votos"];
 
-            if ($operacion) {
+            if ($operacion == "true") {
                 $cantVotos += 1;
             }else{
                 $cantVotos -= 1;
             }
             
 
-            $sqlUpdate = "UPDATE `noticias` SET `votos`=$cantVotos, WHERE id_noticia = $id";
+            $sqlUpdate = "UPDATE `noticias` SET `votos`=$cantVotos WHERE noticias.id_noticia = $id";
             $sqlUpdate = $this->conn->query($sqlUpdate);
-            echo "cantVotos: " . $cantVotos;
             return $cantVotos;
-        } catch (\Throwable $th) {
-            //throw $th;
+        } catch (PDOException $e) {
+            echo 'Falló la consulta: ' . $e->getMessage();
         }
     }
 
