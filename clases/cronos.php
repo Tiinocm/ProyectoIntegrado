@@ -247,9 +247,9 @@ class cronos extends connection {
             $cantVotos = $cantVotos[0]["votos"];
 
             if ($operacion) {
-                $cantVotos++;
+                $cantVotos += 1;
             }else{
-                $cantVotos--;
+                $cantVotos -= 1;
             }
             
 
