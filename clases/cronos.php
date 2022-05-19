@@ -241,6 +241,10 @@ class cronos extends connection {
     public function updateVotos($id,$operacion)
     {
         try {
+            ini_set('display_errors', 1);
+            ini_set('display_startup_errors', 1);
+            error_reporting(E_ALL);
+            /* mostrar errores */
             $cantVotos = "SELECT votos from noticias WHERE id_noticia = $id";
             $cantVotos = $this->conn->query($cantVotos);
             $cantVotos = $cantVotos->fetchAll(PDO::FETCH_ASSOC);
@@ -257,8 +261,8 @@ class cronos extends connection {
             $sqlUpdate = $this->conn->query($sqlUpdate);
             echo "cantVotos: " . $cantVotos;
             return $cantVotos;
-        } catch (\Throwable $th) {
-            //throw $th;
+        } catch (PDOException $e) {
+            echo 'Falló la consulta: ' . $e->getMessage();
         }
     }
 
