@@ -41,40 +41,11 @@ class noticia
     }
 
     /**
-     * Get the value of usuario
-     */ 
-    public function getUsuario()
-    {
-        return $this->usuario;
-    }
-
-    /**
-     * Get the value of fecha
-     */ 
-    public function getFecha()
-    {
-        return $this->fecha;
-    }
-
-    /**
      * Get the value of votos
      */ 
     public function getVotos()
     {
         return $this->votos;
-    }
-
-    /**
-     * Get the value of imagenPortada
-     */ 
-    public function getImagenPortada()
-    {
-        return $this->imagenPortada;
-    }
-
-    public function getPublico()
-    {
-        return $this->publico;
     }
 
     public function getTitulo()
