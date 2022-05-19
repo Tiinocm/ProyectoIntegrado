@@ -162,6 +162,10 @@
         float: left;
       }
 
+      .publicar{
+        margin: 10px;
+      }
+
 }
 
 /* eliminar bordes blancos al rededor del contenido */
