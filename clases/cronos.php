@@ -272,4 +272,25 @@ class cronos extends connection
     {
         return '<li><a href="comunitario.php?pub=0">Noticias no publicadas</a></li>';
     }
+
+    /* Tino */
+    public function publicarNoticia($id)
+    {
+        /* 
+        UPDATE `noticias` SET `publicidad` = '1' WHERE `noticias`.`id_noticia` = 21;
+        */
+
+        try {
+            $sql = "UPDATE `noticias` SET `publicidad` = '1' WHERE `noticias`.`id_noticia` = 21";
+            $this->conn->query($sql);
+        } catch (PDOException $e) {
+            echo 'Falló la consulta: ' . $e->getMessage();
+        }
+    }
+
+    /* Tino */
+    public function mostrarEnlace()
+    {
+        return ".publicar{ display: block}";
+    }
 }

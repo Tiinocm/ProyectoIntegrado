@@ -163,6 +163,7 @@
       }
 
       .publicar{
+        display: none;
         margin: 10px;
         float: right;
       }

@@ -6,6 +6,7 @@ $mod = ($security->isAdmin($security->getUserData())) ? $cronos->modOption() : "
 $mostrar = ($security->isAdmin($security->getUserData()) && isset($_GET["pub"])) ? 0 : 1;
 $cronos = new cronos;
 $cronos->getNoticias($mostrar);
+$display = ($mostrar == 0) ? $cronos->mostrarEnlace() : "";
 ?>
 
 <!DOCTYPE html>
@@ -25,6 +26,7 @@ $cronos->getNoticias($mostrar);
     <title>Noticias comunitarias</title>
     <style>
         <?php $cronos->styleNoticias() ?>
+        <?= $display ?>
     </style>
 </head>
 
