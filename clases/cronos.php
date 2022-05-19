@@ -276,12 +276,8 @@ class cronos extends connection
     /* Tino */
     public function publicarNoticia($id)
     {
-        /* 
-        UPDATE `noticias` SET `publicidad` = '1' WHERE `noticias`.`id_noticia` = 21;
-        */
-
         try {
-            $sql = "UPDATE `noticias` SET `publicidad` = '1' WHERE `noticias`.`id_noticia` = 21";
+            $sql = "UPDATE `noticias` SET `publicidad` = '1' WHERE `noticias`.`id_noticia` = $id";
             $this->conn->query($sql);
         } catch (PDOException $e) {
             echo 'Falló la consulta: ' . $e->getMessage();
