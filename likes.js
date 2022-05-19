@@ -6,6 +6,7 @@ function main() {
     let icon = document.getElementsByClassName("icon");
     for (let i = 0; i < icon.length; i++) {
         let id = icon[i].classList.toString();
+        id = id.split("=");
         id = id[id.length - 1];
         console.log(id);
         icon[i].addEventListener("click", function () {
