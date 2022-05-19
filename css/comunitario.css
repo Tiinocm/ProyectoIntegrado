@@ -95,7 +95,7 @@
         bottom: 30%;
         color: white;
         width: fit-content;
-        font-size: 1.5em;
+        font-size: 1.5em
       }
   
       .votos i{
@@ -108,7 +108,8 @@
         bottom: 90%;
         padding: 5px;
         color: white;
-        width: fit-content;
+        font-family: Lora,Georgia,Times,Times New Roman,serif;
+        white-space: nowrap;
       }
       .comunidad::before{
         content: '#';
