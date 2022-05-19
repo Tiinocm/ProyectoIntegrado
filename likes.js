@@ -8,8 +8,7 @@ function main() {
         let id = icon[i].classList.toString();
         id = id.split("=");
         id = id[id.length - 1];
-        console.log(id);
-        icon[i].addEventListener("click", function () {
+       icon[i].addEventListener("click", function () {
             if (icon[i].classList.contains("fa-regular")) {
                 icon[i].classList.replace("fa-regular", "fa-solid");
                 sumar(id, i);
@@ -34,7 +33,6 @@ function sumar(id, i) {
     xhttp.addEventListener("readystatechange", function () {
         if (this.readyState == 4 && this.status == 200) {
             let data = JSON.parse(this.responseText);
-            console.log(data);
             document.getElementsByClassName("countvotos")[i].innerHTML = data;
         }
     })
@@ -49,7 +47,7 @@ function restar(id, i) {
     xhttp.addEventListener("readystatechange", function () {
         if (this.readyState == 4 && this.status == 200) {
             let data = JSON.parse(this.responseText);
-            console.log(data);
+    
             document.getElementsByClassName("countvotos")[i].innerHTML = data;
         }
     })
