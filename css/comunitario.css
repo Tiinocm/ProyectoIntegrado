@@ -114,6 +114,28 @@
       .comunidad::before{
         content: '#';
       }
+      .par > *{
+        margin-left: auto;
+        margin-right: 0;
+      }
+      .impar > *{
+        margin-right: auto;
+        margin-left: 0;
+      }
+  
+      .par .titulo{
+        float: left;
+      }
+     .par .votos{
+        float: right;
+      }
+    
+      .impar .titulo{
+        float: right;
+      }
+     .impar .votos{
+        float: left;
+      }
 
 }
 
