@@ -90,6 +90,17 @@
         color: white;
         font-size: 1.2em;
       }
+      .votos{
+        position: relative;
+        bottom: 30%;
+        color: white;
+        width: fit-content;
+        font-size: 1.5em;
+      }
+  
+      .votos i{
+        color: #AEF2F2;
+      }
     
       .comunidad{
         background-color: rgb(255, 122, 123, 0.8);
