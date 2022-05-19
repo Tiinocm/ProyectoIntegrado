@@ -108,6 +108,7 @@
         bottom: 90%;
         padding: 5px;
         color: white;
+        width: fit-content;
         font-family: Lora,Georgia,Times,Times New Roman,serif;
         white-space: nowrap;
       }
