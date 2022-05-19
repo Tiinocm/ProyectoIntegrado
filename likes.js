@@ -34,7 +34,7 @@ function sumar(id) {
         if (this.readyState == 4 && this.status == 200) {
             let data = JSON.parse(this.responseText);
             console.log(data);
-            document.getElementById("countvotos").innerHTML = data[0]["votos"];
+            document.getElementById("countvotos").innerHTML = data;
         }
     })
     xhttp.open("GET", "likes.php?" + url, true);
@@ -49,7 +49,7 @@ function restar(id) {
         if (this.readyState == 4 && this.status == 200) {
             let data = JSON.parse(this.responseText);
             console.log(data);
-            document.getElementById("countvotos").innerHTML = data[0]["votos"];
+            document.getElementById("countvotos").innerHTML = data;
         }
     })
     xhttp.open("GET", "likes.php?" + url, true);
