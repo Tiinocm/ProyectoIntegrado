@@ -201,6 +201,11 @@
       width: fit-content;
       font-family: Lora,Georgia,Times,Times New Roman,serif;
       white-space: nowrap;
+      overflow: hidden;
+    }
+
+    .impar .comunidad{
+      margin-left: -50px!important;
     }
     .votos{
       position: relative;
