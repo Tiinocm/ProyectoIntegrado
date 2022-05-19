@@ -176,7 +176,7 @@ class cronos extends connection
             try {
                 $maxId = $this->getIdNoticia();
                 $maxId++;
-
+                print_r($_POST);
                 $titulo = $_POST["titulo"];
                 $imgPortada = $location;
                 $comunidad = $_POST["comunidades"];
@@ -208,6 +208,7 @@ class cronos extends connection
             }
         } else {
             echo "los ficheros no se pudieron subir correctamente";
+            print_r($_POST);
         }
 
         return $location;
