@@ -147,9 +147,6 @@ class cronos extends connection
     /* hecho por tino */
     public function insertNoticia()
     {
-        ini_set('display_errors', 1);
-        ini_set('display_startup_errors', 1);
-        error_reporting(E_ALL);
         $location = "img/" . $_FILES["img"]["name"];
         $temporal = $_FILES["img"]["tmp_name"];
 
