@@ -259,7 +259,6 @@ class cronos extends connection {
 
             $sqlUpdate = "UPDATE `noticias` SET `votos`=$cantVotos WHERE noticias.id_noticia = $id";
             $sqlUpdate = $this->conn->query($sqlUpdate);
-            echo "cantVotos: " . $cantVotos;
             return $cantVotos;
         } catch (PDOException $e) {
             echo 'Falló la consulta: ' . $e->getMessage();
