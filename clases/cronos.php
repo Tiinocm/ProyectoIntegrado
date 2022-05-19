@@ -1,9 +1,10 @@
 <?php
 
-class cronos extends connection {
+class cronos extends connection
+{
     protected $publicadas = [];
     protected $noticia =  [];
-/* hecho por tino */
+    /* hecho por tino */
     public function getNoticias($publicado)
     {
         /* 
@@ -18,14 +19,14 @@ class cronos extends connection {
             $rows = $this->conn->query($sql);
             $rows = $rows->fetchAll(PDO::FETCH_ASSOC);
 
-            for ($i=0; $i < count($rows); $i++) { 
+            for ($i = 0; $i < count($rows); $i++) {
                 array_push($this->publicadas, new noticia($rows[$i]["id_noticia"], $rows[$i]["nombre"], $rows[$i]["usuario"], $rows[$i]["fecha"], $rows[$i]["votos"], $rows[$i]["imagen_portada"], $rows[$i]["publicidad"], $rows[$i]["titulo"], $rows[$i]["plantilla"]));
             }
         } catch (PDOException $e) {
             echo 'Falló la consulta: ' . $e->getMessage();
         }
     }
-/* hecho por tino */
+    /* hecho por tino */
     public function getNoticia($id)
     {
         /* 
@@ -44,7 +45,7 @@ class cronos extends connection {
 
             if ($plantilla == 0) {
                 $strPlantilla = "plantilla0.titulo1, plantilla0.parrafo1, plantilla0.img1, plantilla0.titulo2, plantilla0.parrafo2, plantilla0.img2";
-            }else{
+            } else {
                 $strPlantilla = "plantilla1.titulo1, plantilla1.parrafo1, plantilla1.img1, plantilla1.parrafo2, plantilla1.img2";
             }
 
@@ -62,7 +63,7 @@ class cronos extends connection {
             echo 'Falló la consulta: ' . $e->getMessage();
         }
     }
-/* hecho por tino */
+    /* hecho por tino */
     public function drawNoticias($lugar)
     {
 
@@ -75,21 +76,21 @@ class cronos extends connection {
         $countFor = count($this->publicadas);
         if ($lugar != "destacadas") {
             $i = 3;
-        }else{
+        } else {
             $countFor = 3;
             $i = 0;
         }
         $str = "";
-        for ($i; $i < $countFor; $i++) { 
+        for ($i; $i < $countFor; $i++) {
             $num = ($i % 2 == 0) ? "par" : "impar";
             $str .= "<li class='noticia noti$i $num'>";
-            $str .= "<div class='titulo'><a href='noticiaIndividual.php?id=". $this->publicadas[$i]->getId() . "'>" . $this->publicadas[$i]->getTitulo() . "</a></div>" .  '<div class="votos"><i class="icon fa-regular fa-heart id=' . $this->publicadas[$i]->getId() . '"></i> <span id="countvotos">' . $this->publicadas[$i]->getVotos() . '</span></div>';
+            $str .= "<div class='titulo'><a href='noticiaIndividual.php?id=" . $this->publicadas[$i]->getId() . "'>" . $this->publicadas[$i]->getTitulo() . "</a></div>" .  '<div class="votos"><i class="icon fa-regular fa-heart id=' . $this->publicadas[$i]->getId() . '"></i> <span id="countvotos">' . $this->publicadas[$i]->getVotos() . '</span></div>';
             $str .= "<div class='comunidad'>" . $this->publicadas[$i]->getNombreComunidad() . "</div></li>";
             if ($lugar != "destacadas") {
                 $str .= '<li class="textNoticia"><a href="noticiaIndividual.php?id=' . $this->publicadas[$i]->getId() . '"><div class="tituloT">' . $this->publicadas[$i]->getTitulo() . '</div></a></li>';
             }
         }
-        echo $str;  
+        echo $str;
     }
 
     public function styleNoticia($id)
@@ -111,25 +112,25 @@ class cronos extends connection {
             background-image: url($img);
         }";
     }
-/* hecho por tino */
+    /* hecho por tino */
     public function drawComunitario()
     {
         /* muestra por pantalla las noticias de comunitario.php */
-        for ($i=0; $i < count($this->publicadas); $i++) { 
+        for ($i = 0; $i < count($this->publicadas); $i++) {
             $num = ($i % 2 == 0) ? "par" : "impar";
             $str = "<li class='noticia noti$i $num'>";
-            $str .= "<a href='noticiaIndividual.php?id=". $this->publicadas[$i]->getId() . "'><div class='titulo'>" . $this->publicadas[$i]->getTitulo() . "</div></a>";
+            $str .= "<a href='noticiaIndividual.php?id=" . $this->publicadas[$i]->getId() . "'><div class='titulo'>" . $this->publicadas[$i]->getTitulo() . "</div></a>";
             $str .= "<div class='comunidad'>" . $this->publicadas[$i]->getNombreComunidad() . "</div>
             </li>";
-                $str .= '<li class="textNoticia"><a href="noticiaIndividual.php?id=' . $this->publicadas[$i]->getId() . '"<div class="tituloT">' . $this->publicadas[$i]->getTitulo() . '</div></a></li>';
-            echo $str;  
+            $str .= '<li class="textNoticia"><a href="noticiaIndividual.php?id=' . $this->publicadas[$i]->getId() . '"<div class="tituloT">' . $this->publicadas[$i]->getTitulo() . '</div></a></li>';
+            echo $str;
         }
     }
-/* hecho por tino */
+    /* hecho por tino */
     public function styleNoticias()
     {
         /* carga un css a la etiqueta <style> en el head de los html que necesitan un estilo para las noticias */
-        for ($i=0; $i < count($this->publicadas); $i++) { 
+        for ($i = 0; $i < count($this->publicadas); $i++) {
             $style = ".noti$i::before {
                 content: '';
                 position: relative;
@@ -143,7 +144,7 @@ class cronos extends connection {
             echo $style;
         }
     }
-/* hecho por tino */
+    /* hecho por tino */
     public function insertNoticia()
     {
         $location = "img/" . $_FILES["img"]["name"];
@@ -151,7 +152,7 @@ class cronos extends connection {
 
         $location1 = "img/" . $_FILES["img1"]["name"];
         $temporal1 = $_FILES["img1"]["tmp_name"];
-        
+
         $location2 = "img/" . $_FILES["img2"]["name"];
         $temporal2 = $_FILES["img2"]["tmp_name"];
 
@@ -160,7 +161,7 @@ class cronos extends connection {
 
         $location4 = "img/" . $_FILES["img4"]["name"];
         $temporal4 = $_FILES["img4"]["tmp_name"];
-        
+
         if (move_uploaded_file($temporal, $location)) {
             move_uploaded_file($temporal1, $location1);
             move_uploaded_file($temporal2, $location2);
@@ -188,26 +189,24 @@ class cronos extends connection {
                 $parrafo4 = $_POST["text4"];
 
                 if ($_POST["plantilla"] == 0) {
-                    $sql = "INSERT INTO `plantilla0`(`id_noticia`, `titulo1`, `parrafo1`, `img1`, `titulo2`, `parrafo2`, `img2`) VALUES ($maxId,'$titulo1','$parrafo1','$location1','$titulo2','$parrafo2','$location2')";  
+                    $sql = "INSERT INTO `plantilla0`(`id_noticia`, `titulo1`, `parrafo1`, `img1`, `titulo2`, `parrafo2`, `img2`) VALUES ($maxId,'$titulo1','$parrafo1','$location1','$titulo2','$parrafo2','$location2')";
                     $this->conn->exec($sql);
                     /* redirigir */
-                }else{
+                } else {
                     $sql = "INSERT INTO `plantilla1`(`id_noticia`, `titulo1`, `parrafo1`, `img1`, `parrafo2`, `img2`) VALUES ($maxId,'$titulo3','$parrafo3','$location3','$parrafo4','$location4')";
                     $this->conn->exec($sql);
                     /* redirigir */
                 }
-                
             } catch (PDOException $e) {
                 echo 'Falló la consulta: ' . $e->getMessage();
             }
-        }else{
+        } else {
             echo "los ficheros no se pudieron subir correctamente";
         }
 
         return $location;
-
     }
-/* hecho por tino */
+    /* hecho por tino */
     private function getIdNoticia()
     {
         try {
@@ -227,35 +226,29 @@ class cronos extends connection {
             $comunidades = $this->conn->query($sql);
             $comunidades = $comunidades->fetchAll(PDO::FETCH_ASSOC);
             $str = "";
-            for ($i=0; $i < count($comunidades); $i++) { 
+            for ($i = 0; $i < count($comunidades); $i++) {
                 $str .= '<option value="' . $comunidades[$i]["id_comunidad"] . '">' . $comunidades[$i]["nombre"] . '</option>';
             }
             echo $str;
-
         } catch (PDOException $e) {
             echo 'Falló la consulta: ' . $e->getMessage();
         }
-
     }
-
-    public function updateVotos($id,$operacion)
+    /* Alejandro */
+    public function updateVotos($id, $operacion)
     {
         try {
-            ini_set('display_errors', 1);
-            ini_set('display_startup_errors', 1);
-            error_reporting(E_ALL);
-            /* mostrar errores */
             $cantVotos = "SELECT votos from noticias WHERE id_noticia = $id";
             $cantVotos = $this->conn->query($cantVotos);
             $cantVotos = $cantVotos->fetchAll(PDO::FETCH_ASSOC);
             $cantVotos = $cantVotos[0]["votos"];
 
-            if ($operacion) {
+            if ($operacion == "true") {
                 $cantVotos += 1;
-            }else{
+            } else {
                 $cantVotos -= 1;
             }
-            
+
 
             $sqlUpdate = "UPDATE `noticias` SET `votos`=$cantVotos WHERE noticias.id_noticia = $id";
             $sqlUpdate = $this->conn->query($sqlUpdate);
