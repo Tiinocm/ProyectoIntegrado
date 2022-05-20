@@ -1,4 +1,5 @@
 La base de datos está en Cyberpanel
+https://proyectokronos.ddns.net:8090/
 Nombre Cyberpanel: admin
 Contraseña Cyberpanel :1234567
 https://github.com/Tiinocm/ProyectoIntegrado.git
