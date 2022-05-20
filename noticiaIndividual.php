@@ -4,6 +4,7 @@ $security = new security();
 
 $cronos = new cronos;
 $mod = ($security->isAdmin($security->getUserData())) ? $cronos->modOption() : "";
+$id = $_GET["id"];
 ?>
 
 
@@ -52,7 +53,7 @@ $mod = ($security->isAdmin($security->getUserData())) ? $cronos->modOption() : "
             <div class="titulo" id="titulo"></div><br>
                 <cite class="autor">Escrito por <a href="#" class="users" id="user"></a></cite>
                 <div class="dia" id="dia"> 9 Mayo 2022</div>
-                <div class="votos"><i class="icon fa-regular fa-heart"></i><span class="countvotos"></span></div>
+                <div class="votos"><i class="icon fa-regular fa-heart id=<?= $id ?>"></i><span class="countvotos"></span></div>
             <div class="plantilla0" id="plantilla0">
                 <h1 class="titulo1" id="titulo1"></h1>
                 <p class="parrafo" id="parrafo1"></p>

@@ -1,4 +1,4 @@
-main();
+document.addEventListener("DOMContentloaded", main())
 
 function main()
 {
@@ -13,7 +13,6 @@ function main()
             document.getElementById("dia").innerHTML = data[0]["fecha"];
             document.getElementById("titulo").innerHTML = data[0]["titulo"];
             document.getElementById("user").innerHTML = data[0]["usuario"];
-            document.getElementsByClassName("icon")[0].classList.add("id=" + get.split("=")[1]);
             document.getElementsByClassName("countvotos")[0].innerHTML = data[0]["votos"];
             if (data[0]["plantilla"] == 0) {
                 document.getElementById("plantilla0").style.display = "block";
