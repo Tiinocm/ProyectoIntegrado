@@ -1,4 +1,4 @@
-document.addEventListener("DOMContentLoaded", main)
+main();
 
 function main()
 {
