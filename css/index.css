@@ -74,6 +74,9 @@
     z-index: 1;
     font-weight: bold;
     font-family: Lora,Georgia,Times,Times New Roman,serif;
+    width: 70%;
+    white-space: nowrap;
+    overflow: hidden;
   }
 
   .comunidad{
@@ -189,6 +192,9 @@
       z-index: 1;
       font-weight: bold;
       font-family: Lora,Georgia,Times,Times New Roman,serif;
+      width: 70%;
+      white-space: nowrap;
+      overflow: hidden;
     }
 
     .comunidad{

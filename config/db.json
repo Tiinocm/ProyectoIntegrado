@@ -1,6 +1,6 @@
 {
     "servername" : "127.0.0.1",
-    "username" : "proy_root",
-    "password" : "sql12345",
+    "username" : "root",
+    "password" : "",
     "db" : "proy_cronos"
 }
