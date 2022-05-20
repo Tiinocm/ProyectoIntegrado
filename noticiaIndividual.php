@@ -21,7 +21,6 @@ $mod = ($security->isAdmin($security->getUserData())) ? $cronos->modOption() : "
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300&family=Lora&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/f875adcb03.js" crossorigin="anonymous"></script>
     <script src="noticia.js"></script>
-    <script src="likes.js"></script>
     <title>TítuloNoticia</title>
     <style>
         <?= $cronos->styleNoticia($_GET["id"]) ?>
@@ -71,6 +70,7 @@ $mod = ($security->isAdmin($security->getUserData())) ? $cronos->modOption() : "
 
         </section>
     </div>
+    <script src="likes.js"></script>
 </body>
 
 </html>
