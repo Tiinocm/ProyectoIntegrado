@@ -60,4 +60,12 @@ class noticia
     {
         return $this->nombreComunidad;
     }
+
+    /**
+     * Get the value of imagenPortada
+     */ 
+    public function getImagenPortada()
+    {
+        return $this->imagenPortada;
+    }
 }
