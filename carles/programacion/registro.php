@@ -8,7 +8,7 @@
   else 
   { 
     setcookie('contador', 1, time() + 365 * 24 * 60 * 60); 
-    $mensaje = 'Bienvenido a cronos '; 
+    $mensaje = 'Bienvenido a cronos'; 
   }
   //https://www.comocreartuweb.com/consultas/showthread.php/52690-TUTORIAL-Crear-sistema-de-novedades-noticias-del-tipo-pagina-php-id 
   // esto es por si quereis ver cosas que se pueden aplicar en aplicacion web
