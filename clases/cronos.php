@@ -196,11 +196,11 @@ class cronos extends connection
                 if ($_POST["plantilla"] == 0) {
                     $sql = "INSERT INTO `plantilla0`(`id_noticia`, `titulo1`, `parrafo1`, `img1`, `titulo2`, `parrafo2`, `img2`) VALUES ($maxId,'$titulo1','$parrafo1','$location1','$titulo2','$parrafo2','$location2')";
                     $this->conn->exec($sql);
-                    header("location: index.php");
+
                 } else {
                     $sql = "INSERT INTO `plantilla1`(`id_noticia`, `titulo1`, `parrafo1`, `img1`, `parrafo2`, `img2`) VALUES ($maxId,'$titulo3','$parrafo3','$location3','$parrafo4','$location4')";
                     $this->conn->exec($sql);
-                    header("location: index.php");
+
                 }
             } catch (PDOException $e) {
                 echo 'Falló la consulta: ' . $e->getMessage();
