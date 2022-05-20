@@ -1,0 +1,5 @@
+La base de datos está en Cyberpanel
+Nombre Cyberpanel: admin
+Contraseña Cyberpanel :1234567
+https://github.com/Tiinocm/ProyectoIntegrado.git
+34.194.25.162
