@@ -9,7 +9,11 @@ function main()
             let data = JSON.parse(this.responseText);
             console.log(data);
             console.log(data[0]["usuario"]);
-            document.getElementById("imgHeader").src = data[0]["imagen_portada"].slice(1, data[0]["imagen_portada"].length -1);
+
+            let imgHeader = data[0]["imagen_portada"].slice(1, data[0]["imagen_portada"].length -1);
+            imgHeader = imgHeader.split("\"");
+            imgHeader = imgHeader[0];
+            document.getElementById("imgHeader").src = imgHeader;
             document.getElementById("dia").innerHTML = data[0]["fecha"];
             document.getElementById("titulo").innerHTML = data[0]["titulo"];
             document.getElementById("user").innerHTML = data[0]["usuario"];
@@ -20,18 +24,31 @@ function main()
                 document.getElementById("titulo2").innerHTML = data[0]["titulo2"];
                 document.getElementById("parrafo1").innerHTML = data[0]["parrafo1"];
                 document.getElementById("parrafo2").innerHTML = data[0]["parrafo2"];
-                let img1 = data[0]["img1"].slice(1, data[0]["imagen_portada"].length -2);
+
+                let img1 = data[0]["img1"].slice(1, data[0]["img1"].length -1);
                 img1 = img1.split("\"");
                 img1 = img1[0];
                 document.getElementById("img1").src = img1;
-                document.getElementById("img2").src = data[0]["img2"].slice(1, data[0]["imagen_portada"].length -2);
+
+                let img2 = data[0]["img2"].slice(1, data[0]["img2"].length -1);
+                img2 = img2.split("\"");
+                img2 = img2[0];
+                document.getElementById("img2").src = img2;
             }else{
                 document.getElementById("plantilla1").style.display = "block";
                 document.getElementById("titulo3").innerHTML = data[0]["titulo1"];
                 document.getElementById("parrafo3").innerHTML = data[0]["parrafo1"];
                 document.getElementById("parrafo4").innerHTML = data[0]["parrafo2"];
-                document.getElementById("img3").src = data[0]["img3"].slice(1, data[0]["imagen_portada"].length -2);
-                document.getElementById("img4").src = data[0]["img4"].slice(1, data[0]["imagen_portada"].length -2);
+
+                let img3 = data[0]["img3"].slice(1, data[0]["img3"].length -1);
+                img3 = img3.split("\"");
+                img3 = img3[0];
+                document.getElementById("img3").src = img3;
+
+                let img4 = data[0]["img4"].slice(1, data[0]["img4"].length -1);
+                img4 = img4.split("\"");
+                img4 = img4[0];
+                document.getElementById("img4").src = img4;
             }
         }
     });
