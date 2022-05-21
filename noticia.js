@@ -20,15 +20,15 @@ function main()
                 document.getElementById("titulo2").innerHTML = data[0]["titulo2"];
                 document.getElementById("parrafo1").innerHTML = data[0]["parrafo1"];
                 document.getElementById("parrafo2").innerHTML = data[0]["parrafo2"];
-                document.getElementById("img1").src = data[0]["img1"];
-                document.getElementById("img2").src = data[0]["img2"];
+                document.getElementById("img1").src = data[0]["img1"].slice(1, data[0]["imagen_portada"].length -1);
+                document.getElementById("img2").src = data[0]["img2"].slice(1, data[0]["imagen_portada"].length -1);
             }else{
                 document.getElementById("plantilla1").style.display = "block";
                 document.getElementById("titulo3").innerHTML = data[0]["titulo1"];
                 document.getElementById("parrafo3").innerHTML = data[0]["parrafo1"];
                 document.getElementById("parrafo4").innerHTML = data[0]["parrafo2"];
-                document.getElementById("img3").src = data[0]["img1"];
-                document.getElementById("img4").src = data[0]["img2"];
+                document.getElementById("img3").src = data[0]["img1"].slice(1, data[0]["imagen_portada"].length -1);
+                document.getElementById("img4").src = data[0]["img2"].slice(1, data[0]["imagen_portada"].length -1);
             }
         }
     });
