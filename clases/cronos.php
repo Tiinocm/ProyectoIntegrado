@@ -288,4 +288,14 @@ class cronos extends connection
     {
         return ".publicar{ display: block}";
     }
+
+    public function temp()
+    {
+        try {
+            $sql = "UPDATE `comunidad` SET `nombre` = 'política' WHERE `comunidad`.`id_comunidad` = 4";
+            $sql = $this->conn->query($sql);
+        } catch (PDOException $e) {
+            echo 'Falló la consulta: ' . $e->getMessage();
+        }
+    }
 }
