@@ -288,18 +288,4 @@ class cronos extends connection
     {
         return ".publicar{ display: block}";
     }
-
-    public function temp()
-    {
-        try {
-            $sql = "DELETE FROM `noticias` WHERE id_noticia = 9";
-            $sql = $this->conn->query($sql);
-            $sql2 = "DELETE FROM `noticias` WHERE id_noticia = 16";
-            $sql2 = $this->conn->query($sql2);
-            $sql3 = "DELETE FROM `noticias` WHERE id_noticia = 10";
-            $sql3 = $this->conn->query($sql3);
-        } catch (PDOException $e) {
-            echo 'Falló la consulta: ' . $e->getMessage();
-        }
-    }
 }

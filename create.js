@@ -46,6 +46,6 @@ function main() {
         const xhttp = new XMLHttpRequest();
         xhttp.open("POST", "crear.php", true);
         xhttp.send(formData);
-/*         window.location.href = "index.php"; */
+        window.location.href = "index.php";
     })
 }
