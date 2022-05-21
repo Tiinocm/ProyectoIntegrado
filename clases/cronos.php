@@ -292,10 +292,12 @@ class cronos extends connection
     public function temp()
     {
         try {
-            $sql = "UPDATE `comunidad` SET `nombre` = 'música' WHERE `comunidad`.`id_comunidad` = 2";
+            $sql = "DELETE FROM `noticias` WHERE id_noticia = 9";
             $sql = $this->conn->query($sql);
-            $sql2 = "UPDATE `comunidad` SET `nombre` = 'deporte' WHERE `comunidad`.`id_comunidad` = 6";
+            $sql2 = "DELETE FROM `noticias` WHERE id_noticia = 16";
             $sql2 = $this->conn->query($sql2);
+            $sql3 = "DELETE FROM `noticias` WHERE id_noticia = 10";
+            $sql3 = $this->conn->query($sql3);
         } catch (PDOException $e) {
             echo 'Falló la consulta: ' . $e->getMessage();
         }
