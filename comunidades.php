@@ -50,7 +50,7 @@ $display = ($mostrar == 0) ? $cronos->mostrarEnlace() : "";
         </aside>
     </div>
     <ul class="noticias">
-        <?php $cronos->filtarComunidad("videojuegos") ?>
+        <?php $cronos->filtarComunidad("") ?>
     </ul>
 </body>
 
