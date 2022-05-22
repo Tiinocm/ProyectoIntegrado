@@ -87,7 +87,7 @@ class cronos extends connection
             $num = ($i % 2 == 0) ? "par" : "impar";
             $str .= "<li class='noticia noti$i $num'>";
             $str .= "<div class='titulo'><a href='noticiaIndividual.php?id=" . $this->publicadas[$i]->getId() . "'>" . $this->publicadas[$i]->getTitulo() . "</a></div>" .  '<div class="votos"><i class="icon fa-regular fa-heart id=' . $this->publicadas[$i]->getId() . '"></i> <span class="countvotos">' . $this->publicadas[$i]->getVotos() . '</span></div>';
-            $str .= "<a href='comunidades.php?nombre=" . $this->publicadas[$i]->getNombreComunidad(). "'><div class='comunidad'>" . $this->publicadas[$i]->getNombreComunidad() . "</div></li>";
+            $str .= "<div class='comunidad'><a href='comunidades.php?nombre=" . $this->publicadas[$i]->getNombreComunidad(). "'>" . $this->publicadas[$i]->getNombreComunidad() . "</a></div></li>";
             if ($lugar != "destacadas") {
                 $str .= '<li class="textNoticia"><a href="noticiaIndividual.php?id=' . $this->publicadas[$i]->getId() . '"><div class="tituloT">' . $this->publicadas[$i]->getTitulo() . '</div></a></li>';
             }
@@ -95,7 +95,7 @@ class cronos extends connection
         echo $str;
     }
 
-
+/* hecho por tino */
     public function styleNoticia($id)
     {
         /* 
@@ -124,7 +124,7 @@ class cronos extends connection
             $num = ($i % 2 == 0) ? "par" : "impar";
             $str = "<li class='noticia noti$i $num'>";
             $str .= "<a href='noticiaIndividual.php?id=" . $this->publicadas[$i]->getId() . "'><div class='titulo'>" . $this->publicadas[$i]->getTitulo() . "</div></a>" .  '<div class="votos"><i class="icon fa-regular fa-heart id=' . $this->publicadas[$i]->getId() . '"></i> <span class="countvotos">' . $this->publicadas[$i]->getVotos() . '</span></div>'  ;
-            $str .= "<a href='comunidades.php?nombre=" . $this->publicadas[$i]->getNombreComunidad(). "'><div class='comunidad'>" . $this->publicadas[$i]->getNombreComunidad() . "</div>
+            $str .= "<div class='comunidad'><a href='comunidades.php?nombre=" . $this->publicadas[$i]->getNombreComunidad(). "'>" . $this->publicadas[$i]->getNombreComunidad() . "</a></div>
             </li>";
             $str .= '<li class="textNoticia"><a href="noticiaIndividual.php?id=' . $this->publicadas[$i]->getId() . '"<div class="tituloT">' . $this->publicadas[$i]->getTitulo() . '</div></a> <br> <a class="publicar" href="publicar.php?id=' . $this->publicadas[$i]->getId() . '">Publicar noticia</a> </li>';
             echo $str;

@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentloaded", main())
-
+/* Tino */
 function main()
 {
     let get = window.location.search;

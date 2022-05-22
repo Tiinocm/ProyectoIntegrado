@@ -1,4 +1,5 @@
 <?php
+/* tino y alejandro */
 require_once "autoloading.php";
 $security = new security();
 $security->register();

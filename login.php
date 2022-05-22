@@ -1,5 +1,5 @@
 <?php
-
+/* Tino y Alejandro */
 require_once "autoloading.php";
 $security = new security();
 $loginMessage = $security->doLogin();

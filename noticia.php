@@ -1,5 +1,5 @@
 <?php
-
+/* Tino */
 require_once "autoloading.php";
 $cronos = new cronos;
 $id = $_GET["id"];

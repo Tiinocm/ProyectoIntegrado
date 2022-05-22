@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", main)
-
+/* tino */
 function main() {
     console.log("DOM Content Loaded");
     let plantilla = document.getElementById("plantilla")

@@ -1,4 +1,5 @@
 <?php
+/* tino */
 require_once "autoloading.php";
 $security = new security();
 $cronos = new cronos;
