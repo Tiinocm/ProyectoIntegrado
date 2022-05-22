@@ -289,13 +289,13 @@ class cronos extends connection
         return ".publicar{ display: block}";
     }
 
-    public function filtarComunidad()
+    public function filtarComunidad($comunidad)
     {
         /* al hacer click en una comunidad, podrás ver las noticas filtradas por esa comunidad */
         try {
             $sql = "SELECT noticias.id_noticia, comunidad.nombre, noticias.usuario, noticias.fecha, noticias.votos, noticias.imagen_portada, noticias.publicidad, noticias.titulo, noticias.plantilla from noticias
             inner join comunidad on noticias.id_comunidad = comunidad.id_comunidad
-            where publicidad = 1 ORDER BY votos DESC";
+            where publicidad = 1 AND comunidad.id_comunidad = $comunidad ORDER BY votos DESC";
             $noticias = $this->conn->query($sql);
             $noticias = $noticias->fetchAll(PDO::FETCH_ASSOC);
 
