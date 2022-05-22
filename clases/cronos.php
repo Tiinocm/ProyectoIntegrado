@@ -289,13 +289,14 @@ class cronos extends connection
         return ".publicar{ display: block}";
     }
 
+    /* Candela */
     public function filtarComunidad($comunidad)
     {
         /* al hacer click en una comunidad, podrás ver las noticas filtradas por esa comunidad */
         try {
             $sql = "SELECT noticias.id_noticia, comunidad.nombre, noticias.usuario, noticias.fecha, noticias.votos, noticias.imagen_portada, noticias.publicidad, noticias.titulo, noticias.plantilla from noticias
             inner join comunidad on noticias.id_comunidad = comunidad.id_comunidad
-            where publicidad = 1 AND comunidad.id_comunidad = $comunidad ORDER BY votos DESC";
+            where publicidad = 1 AND comunidad.nombre = '$comunidad' ORDER BY votos DESC";
             $noticias = $this->conn->query($sql);
             $noticias = $noticias->fetchAll(PDO::FETCH_ASSOC);
 
@@ -308,7 +309,6 @@ class cronos extends connection
                 $str .= '<li class="textNoticia"><a href="noticiaIndividual.php?id=' . $noticias[$i]["id_noticia"] . '"<div class="tituloT">' . $noticias[$i]["titulo"] . '</div></a> <br> <a class="publicar" href="publicar.php?id=' . $noticias[$i]["fecha"] . '">Publicar noticia</a> </li>';
                 echo $str;
             }
-            //echo $str;
         } catch (PDOException $e) {
             echo 'Falló la consulta: ' . $e->getMessage();
         }
